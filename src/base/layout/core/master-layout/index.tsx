@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import React from "react";
 import { useAuth } from "@app/modules/auth";
-import AuthedLayout from "../AuthedLayout";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
 
 /**
  * @author ziyakaragoz
@@ -17,7 +18,15 @@ const MasterLayout = () => {
     if (!currentUser) return <Outlet />;
     return (
         <React.Fragment>
-            <AuthedLayout />
+            <div className="flex">
+                <Sidebar />
+                <div className="min-h-screen flex-1">
+                    <Header />
+                    <div className=" p-7">
+                        <Outlet />
+                    </div>
+                </div>
+            </div>
         </React.Fragment>
     );
 };

@@ -96,7 +96,7 @@ border-2 rounded-md  ${!open && "rotate-180"}`}
                     className={`text-white origin-left font-medium text-xl duration-200 ${!open ? "scale-0" : ""
                         }`}
                 >
-                    Ridenear
+                    My Panel
                 </h1>
             </div>
             <ul className="pt-6">
