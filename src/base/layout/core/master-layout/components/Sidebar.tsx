@@ -93,7 +93,7 @@ border-2 rounded-md  ${!open && "rotate-180"}`}
                 </svg>
 
                 <h1
-                    className={`text-white origin-left font-medium text-xl duration-200 ${!open ? "scale-0" : ""
+                    className={`text-gray-900 origin-left font-medium text-xl duration-200 ${!open ? "scale-0" : ""
                         }`}
                 >
                     My Panel
