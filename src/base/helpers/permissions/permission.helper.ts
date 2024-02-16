@@ -3,12 +3,12 @@ import { jwtDecode } from "jwt-decode";
 const AUTH_LOCAL_STORAGE_KEY =
   import.meta.env.VITE_AUTH_LOCAL_STORAGE_KEY || "accessToken";
 export const hasPermissionMany = (access: string) => {
-  const accessArr = access.split(",");
+  if (access.includes(ERole.Public)) return true;
+  const accessArr = access?.split(",");
   const accessToken =
     localStorage.getItem(AUTH_LOCAL_STORAGE_KEY) ??
     sessionStorage.getItem(AUTH_LOCAL_STORAGE_KEY) ??
     "";
-
   return (
     accessArr.filter(
       // @ts-ignore

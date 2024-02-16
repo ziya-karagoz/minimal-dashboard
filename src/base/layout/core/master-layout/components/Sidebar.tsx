@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import React, { useEffect, useState } from "react";
 import { Menus } from "../../data";
 import clsx from "clsx";
+import { hasPermissionMany } from "@base/helpers/permissions/permission.helper";
 
 const Sidebar = () => {
     const [open, setOpen] = useState(true);
@@ -113,16 +114,21 @@ border-2 rounded-md  ${!open && "rotate-180"}`}
             </div>
             <ul className="pt-6">
                 {Menus.map((Menu, index) => (
-                    <li key={index}>
+                    hasPermissionMany(Menu.roles) ? <li key={index}>
                         <div
-                            className={`flex justify-between rounded-md p-3 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center
-      ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-gray-100"}`}
+                            className={clsx("flex justify-between rounded-md p-3 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center", {
+                                "mt-9": Menu.gap,
+                                "mt-2": !Menu.gap,
+                                "bg-gray-100": index === 0,
+                            })}
                             onClick={() => toggleMenu(index)}
                         >
                             <div className="flex items-center gap-x-4">
                                 <Icon icon={Menu.icon} />
                                 <span
-                                    className={`${!open && "hidden"} origin-left duration-200`}
+                                    className={clsx("origin-left duration-200", {
+                                        hidden: !open,
+                                    })}
                                 >
                                     {Menu.title}
                                 </span>
@@ -130,18 +136,21 @@ border-2 rounded-md  ${!open && "rotate-180"}`}
                             {Menu.children && (
                                 <Icon
                                     icon="mingcute:down-fill"
-                                    className={`transition-transform duration-200 ${activeMenu === index ? "rotate-180" : ""
-                                        }`}
+                                    className={clsx("transition-transform duration-200", {
+                                        "rotate-180": activeMenu === index,
+                                    })}
                                 />
                             )}
                         </div>
                         {Menu.children && (
                             <ul
-                                className={`pl-4 transition-[max-height] duration-300 overflow-hidden ${activeMenu === index ? "max-h-40" : "max-h-0"
-                                    }`}
+                                className={clsx("pl-4 transition-[max-height] duration-300 overflow-hidden", {
+                                    "max-h-40": activeMenu === index,
+                                    "max-h-0": activeMenu !== index,
+                                })}
                             >
                                 {Menu.children.map((child, childIndex) => (
-                                    <li
+                                    hasPermissionMany(child.roles) ? <li
                                         key={childIndex}
                                         className="flex rounded-md p-2 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center gap-x-4 mt-2"
                                     >
@@ -152,11 +161,11 @@ border-2 rounded-md  ${!open && "rotate-180"}`}
                                         >
                                             {child.title}
                                         </span>
-                                    </li>
+                                    </li> : null
                                 ))}
                             </ul>
                         )}
-                    </li>
+                    </li> : null
                 ))}
             </ul>
         </div>
