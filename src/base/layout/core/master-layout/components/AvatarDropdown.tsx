@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 
 const AvatarDropdown = () => {
-    const { currentUser } = useAuth();
+    const { currentUser, logout } = useAuth();
     const [open, setOpen] = useState(false);
 
 
@@ -53,12 +53,16 @@ const AvatarDropdown = () => {
                         </li>
                     </ul>
                     <div className="py-1">
-                        <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        <span
+                            onClick={() => {
+                                logout({
+                                    alert: true
+                                })
+                            }}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
                         >
                             Sign out
-                        </a>
+                        </span>
                     </div>
                 </div>
             </OutsideClickHandler>

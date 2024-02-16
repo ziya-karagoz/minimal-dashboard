@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { Menus } from "../../data";
 import clsx from "clsx";
 import { hasPermissionMany } from "@base/helpers/permissions/permission.helper";
@@ -36,8 +37,7 @@ const Sidebar = () => {
             )}
         >
             <svg
-                className={`absolute cursor-pointer -right-3 top-9 w-7 border-gray-700 shadow-md
-border-2 rounded-md  ${!open && "rotate-180"}`}
+                className={`absolute cursor-pointer -right-3 top-9 w-7 border-2 border-gray-700 shadow-mdborder-2 rounded-md  ${!open && "rotate-180"}`}
                 onClick={() => setOpen(!open)}
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
@@ -113,60 +113,104 @@ border-2 rounded-md  ${!open && "rotate-180"}`}
                 </h1>
             </div>
             <ul className="pt-6">
-                {Menus.map((Menu, index) => (
-                    hasPermissionMany(Menu.roles) ? <li key={index}>
-                        <div
-                            className={clsx("flex justify-between rounded-md p-3 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center", {
-                                "mt-9": Menu.gap,
-                                "mt-2": !Menu.gap,
-                                "bg-gray-100": index === 0,
-                            })}
-                            onClick={() => toggleMenu(index)}
-                        >
-                            <div className="flex items-center gap-x-4">
-                                <Icon icon={Menu.icon} />
-                                <span
-                                    className={clsx("origin-left duration-200", {
-                                        hidden: !open,
-                                    })}
+                {Menus.map((Menu, index) =>
+                    hasPermissionMany(Menu.roles) ? (
+                        <li key={index}>
+                            {
+                                Menu.to ? <NavLink
+                                    to={Menu.to}
+                                    className={clsx(
+                                        "flex justify-between rounded-md p-3 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center",
+                                        {
+                                            "mt-9": Menu.gap,
+                                            "mt-2": !Menu.gap,
+                                            active: activeMenu === index,
+                                        }
+                                    )}
+                                    onClick={() => toggleMenu(index)}
                                 >
-                                    {Menu.title}
-                                </span>
-                            </div>
-                            {Menu.children && (
-                                <Icon
-                                    icon="mingcute:down-fill"
-                                    className={clsx("transition-transform duration-200", {
-                                        "rotate-180": activeMenu === index,
-                                    })}
-                                />
-                            )}
-                        </div>
-                        {Menu.children && (
-                            <ul
-                                className={clsx("pl-4 transition-[max-height] duration-300 overflow-hidden", {
-                                    "max-h-40": activeMenu === index,
-                                    "max-h-0": activeMenu !== index,
-                                })}
-                            >
-                                {Menu.children.map((child, childIndex) => (
-                                    hasPermissionMany(child.roles) ? <li
-                                        key={childIndex}
-                                        className="flex rounded-md p-2 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center gap-x-4 mt-2"
-                                    >
-                                        <Icon icon={child.icon} />
+                                    <div className="flex items-center gap-x-4">
+                                        <Icon icon={Menu.icon} />
                                         <span
-                                            className={`${!open && "hidden"
-                                                } origin-left duration-200`}
+                                            className={clsx("origin-left duration-200", {
+                                                hidden: !open,
+                                            })}
                                         >
-                                            {child.title}
+                                            {Menu.title}
                                         </span>
-                                    </li> : null
-                                ))}
-                            </ul>
-                        )}
-                    </li> : null
-                ))}
+                                    </div>
+                                    {Menu.children && (
+                                        <Icon
+                                            icon="mingcute:down-fill"
+                                            className={clsx("transition-transform duration-200", {
+                                                "rotate-180": activeMenu === index,
+                                            })}
+                                        />
+                                    )}
+                                </NavLink> : <li
+                                    className={clsx(
+                                        "flex justify-between rounded-md p-3 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center",
+                                        {
+                                            "mt-9": Menu.gap,
+                                            "mt-2": !Menu.gap,
+                                            active: activeMenu === index,
+                                        }
+                                    )}
+                                    onClick={() => toggleMenu(index)}
+                                >
+                                    <div className="flex items-center gap-x-4">
+                                        <Icon icon={Menu.icon} />
+                                        <span
+                                            className={clsx("origin-left duration-200", {
+                                                hidden: !open,
+                                            })}
+                                        >
+                                            {Menu.title}
+                                        </span>
+                                    </div>
+                                    {Menu.children && (
+                                        <Icon
+                                            icon="mingcute:down-fill"
+                                            className={clsx("transition-transform duration-200", {
+                                                "rotate-180": activeMenu === index,
+                                            })}
+                                        />
+                                    )}
+                                </li>
+                            }
+
+                            {Menu.children && (
+                                <ul
+                                    className={clsx(
+                                        "pl-4 transition-[max-height] duration-300 overflow-hidden",
+                                        {
+                                            "max-h-40": activeMenu === index,
+                                            "max-h-0": activeMenu !== index,
+                                        }
+                                    )}
+                                >
+                                    {Menu.children.map((child, childIndex) =>
+                                        hasPermissionMany(child.roles) ? (
+                                            child.to ? <NavLink
+                                                to={child.to}
+                                                key={childIndex}
+                                                className="flex rounded-md p-2 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center gap-x-4 mt-2"
+                                            >
+                                                <Icon icon={child.icon} />
+                                                <span
+                                                    className={`${!open && "hidden"
+                                                        } origin-left duration-200`}
+                                                >
+                                                    {child.title}
+                                                </span>
+                                            </NavLink> : null
+                                        ) : null
+                                    )}
+                                </ul>
+                            )}
+                        </li>
+                    ) : null
+                )}
             </ul>
         </div>
     );

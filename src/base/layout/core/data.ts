@@ -4,10 +4,12 @@ export const Menus = [
   {
     title: "Dashboard",
     roles: `${ERole.Public}`,
+    to: "/dashboard",
     icon: "majesticons:home",
   },
   {
     title: "Inbox",
+    to: "/inbox",
     roles: `${ERole.Restricted}`,
     icon: "material-symbols:inbox",
   },
@@ -18,11 +20,13 @@ export const Menus = [
     children: [
       {
         title: "Sub Dashboard 1",
-        roles: `${ERole.Restricted}`,
+        to: "/account/list",
+        roles: `${ERole.Public}`,
         icon: "material-symbols:subdirectory-arrow-right",
       },
       {
         title: "Sub Dashboard 2",
+        to: "/account/test",
         roles: `${ERole.Public}`,
         icon: "material-symbols:subdirectory-arrow-right",
       },
@@ -31,6 +35,7 @@ export const Menus = [
   },
   {
     title: "Schedule",
+    to: "/schedule",
     roles: `${ERole.Public}`,
     icon: "uis:schedule",
   },

@@ -73,13 +73,14 @@ const LayoutSplashScreen: FC<{ visible?: boolean }> = ({ visible = true }) => {
     }, [setCount, visible]);
 
     return (
-        <div className="splash-screen">
+        <div className="w-screen h-screen flex items-center justify-center fixed inset-0 z-50 bg-white">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="39"
                 height="39"
                 viewBox="0 0 39 39"
                 fill="none"
+                className="animate-spin"
             >
                 <g clipPath="url(#clip0_5539_607)">
                     <path
