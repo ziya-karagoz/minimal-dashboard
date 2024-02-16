@@ -23,8 +23,8 @@
     /* Path Alias */
     "types": ["node"],
     "paths": {
-      "@/*": ["./src/*"],
-      "@base/*": ["./src/base/*"]
+      "@base/*": ["./src/base/*"],
+      "@app/*": ["./src/app/*"]
     }
   },
   "include": ["src"],
