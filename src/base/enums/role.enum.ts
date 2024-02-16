@@ -27,6 +27,7 @@ export class ERole {
 
 export class ERolePath {
   static "/dashboard" = ERole.Public;
+  static "/dashboard/components" = ERole.Public;
   static "/user/list" = ERole.UserView;
   static "/user/create" = ERole.UserCreate;
 
