@@ -1,6 +1,7 @@
 import { useAuth } from "@app/modules/auth";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React from "react";
+import Notifications from "./Notifications";
 
 const Header = () => {
     const { currentUser } = useAuth();
@@ -88,12 +89,8 @@ const Header = () => {
                     </div>
 
                     <div className="flex items-center lg:order-2 gap-x-2">
-                        <button
-                            type="button"
-                            className="text-gray-700 shadow-md hover:bg-gray-200 hover:text-white focus:ring-2 focus:outline-none focus:ring-gray-300 font-medium rounded-md text-sm p-2.5 text-center inline-flex items-center"
-                        >
-                            <Icon icon="iconamoon:notification" />
-                        </button>
+                        <Notifications />
+
 
                         <img
                             className="w-10 h-10 rounded-full cursor-pointer"

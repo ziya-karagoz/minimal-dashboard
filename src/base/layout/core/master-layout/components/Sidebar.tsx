@@ -34,7 +34,7 @@ const Sidebar = () => {
             }
         >
             <svg
-                className={`absolute cursor-pointer -right-3 top-9 w-7 border-white bg-white
+                className={`absolute cursor-pointer -right-3 top-9 w-7 border-gray-700 shadow-md
 border-2 rounded-md  ${!open && "rotate-180"}`}
                 onClick={() => setOpen(!open)}
                 xmlns="http://www.w3.org/2000/svg"
