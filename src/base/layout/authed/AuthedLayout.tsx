@@ -1,49 +1,10 @@
 import { useEffect, useState } from "react";
 import { Icon } from '@iconify/react';
-const Sidebar = () => {
+import { Menus } from "./data";
+const AuthedLayout = () => {
     const [open, setOpen] = useState(true);
     const [activeMenu, setActiveMenu] = useState(null);
-    const Menus = [
-        {
-            title: "Dashboard",
-            icon: (
-                <Icon icon="majesticons:home" />
-            ),
-            children: [
-                {
-                    title: "Sub Dashboard 1",
-                    icon: (
-                        <Icon icon="material-symbols:subdirectory-arrow-right" />
-                    ),
-                },
-                {
-                    title: "Sub Dashboard 2",
-                    icon: (
-                        <Icon icon="material-symbols:subdirectory-arrow-right" />
-                    ),
-                },
-            ],
-        },
-        {
-            title: "Inbox",
-            icon: (
-                <Icon icon="material-symbols:inbox" />
-            ),
-        },
-        {
-            title: "Accounts",
-            icon: (
-                <Icon icon="mdi:accounts" />
-            ),
-            gap: true,
-        },
-        {
-            title: "Schedule",
-            icon: (
-                <Icon icon="uis:schedule" />
-            ),
-        },
-    ];
+
 
     const toggleMenu = (index: any) => {
         if (activeMenu === index) {
@@ -66,11 +27,11 @@ const Sidebar = () => {
         <div className="flex">
             <div
                 className={` ${open ? "w-72" : "w-20 "
-                    } bg-white h-screen p-5  pt-8 relative duration-300`}
+                    } bg-white h-screen p-5  pt-8 relative duration-300 shadow-xl`}
             >
                 <svg
-                    className={`absolute cursor-pointer -right-3 top-9 w-7 border-white
-           border-2 rounded-full  ${!open && "rotate-180"}`}
+                    className={`absolute cursor-pointer -right-3 top-9 w-7 border-white bg-white
+           border-2 rounded-md  ${!open && "rotate-180"}`}
                     onClick={() => setOpen(!open)}
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
@@ -145,7 +106,7 @@ const Sidebar = () => {
                                 onClick={() => toggleMenu(index)}
                             >
                                 <div className="flex items-center gap-x-4">
-                                    {Menu.icon}
+                                    <Icon icon={Menu.icon} />
                                     <span
                                         className={`${!open && "hidden"} origin-left duration-200`}
                                     >
@@ -166,7 +127,7 @@ const Sidebar = () => {
                                             key={childIndex}
                                             className="flex rounded-md p-2 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center gap-x-4 mt-2"
                                         >
-                                            {child.icon}
+                                            <Icon icon={child.icon} />
                                             <span
                                                 className={`${!open && "hidden"
                                                     } origin-left duration-200`}
@@ -187,4 +148,4 @@ const Sidebar = () => {
         </div>
     );
 };
-export default Sidebar;
+export default AuthedLayout;

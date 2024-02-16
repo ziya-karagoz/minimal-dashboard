@@ -1,9 +1,9 @@
 import React from 'react'
-import Sidebar from "@/base/layout/Sidebar";
+import AuthedLayout from "@/base/layout/authed/AuthedLayout";
 
 const App = () => {
   return (
-    <Sidebar />
+    <AuthedLayout />
   )
 }
 
