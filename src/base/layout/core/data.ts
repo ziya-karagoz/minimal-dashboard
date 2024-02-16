@@ -2,6 +2,14 @@ export const Menus = [
   {
     title: "Dashboard",
     icon: "majesticons:home",
+  },
+  {
+    title: "Inbox",
+    icon: "material-symbols:inbox",
+  },
+  {
+    title: "Accounts",
+    icon: "mdi:accounts",
     children: [
       {
         title: "Sub Dashboard 1",
@@ -12,14 +20,6 @@ export const Menus = [
         icon: "material-symbols:subdirectory-arrow-right",
       },
     ],
-  },
-  {
-    title: "Inbox",
-    icon: "material-symbols:inbox",
-  },
-  {
-    title: "Accounts",
-    icon: "mdi:accounts",
     gap: true,
   },
   {
