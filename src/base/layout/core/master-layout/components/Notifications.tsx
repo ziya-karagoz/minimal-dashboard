@@ -1,51 +1,27 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import clsx from "clsx";
 import { useState } from "react";
-import OutsideClickHandler from 'react-outside-click-handler';
-
+import OutsideClickHandler from "react-outside-click-handler";
 
 const Notifications = () => {
     const [open, setOpen] = useState(false);
-    const [openedByClick, setOpenedByClick] = useState(false);
-
-    const handleMouseEnter = () => {
-        if (!openedByClick) {
-            setOpen(true);
-        }
-    };
-
-    const handleMouseLeave = () => {
-        if (!openedByClick) {
-            setOpen(false);
-        }
-    };
-
-    const handleClick = () => {
-        setOpen(!open);
-        setOpenedByClick(!open);
-    };
-
-    const handleOutsideClick = () => {
-        setOpen(false);
-        setOpenedByClick(false);
-    };
 
     return (
         <div className="relative inline-block">
             <button
                 type="button"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                onClick={handleClick}
-                className={clsx("text-gray-700 shadow-md focus:ring-2 focus:outline-none focus:ring-gray-300 font-medium rounded-md text-sm p-2.5 text-center inline-flex items-center", {
-                    "bg-gray-200": open,
-                    "bg-gray-300": openedByClick,
-                })}
+                onClick={() => setOpen(prev => !prev)}
+                className={clsx(
+                    "text-gray-700 shadow-md focus:ring-2 focus:outline-none focus:ring-gray-300 font-medium rounded-md text-sm p-2.5 text-center inline-flex items-center",
+                    {
+                        "bg-gray-200": open,
+                    }
+                )}
             >
                 <Icon icon="iconamoon:notification" />
             </button>
 
-            <OutsideClickHandler onOutsideClick={handleOutsideClick}>
+            <OutsideClickHandler onOutsideClick={() => setOpen(false)}>
                 <div
                     className={`z-20 min-w-72 sm:min-w-96 bg-white divide-y divide-gray-100 rounded-lg shadow absolute right-0 top-12 transition-[max-height] duration-300 overflow-hidden ${open ? "max-h-screen" : "max-h-0"
                         }`}
@@ -54,7 +30,10 @@ const Notifications = () => {
                         Notifications
                     </div>
                     <div className="divide-y divide-gray-100 bg-white">
-                        <a href="#" className="flex px-4 py-3 bg-bg-white hover:bg-gray-100 ">
+                        <a
+                            href="#"
+                            className="flex px-4 py-3 bg-bg-white hover:bg-gray-100 "
+                        >
                             <div className="flex-shrink-0">
                                 <img
                                     className="rounded-full w-11 h-11"

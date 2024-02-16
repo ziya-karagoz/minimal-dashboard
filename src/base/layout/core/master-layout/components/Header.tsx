@@ -2,6 +2,7 @@ import { useAuth } from "@app/modules/auth";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React from "react";
 import Notifications from "./Notifications";
+import AvatarDropdown from "./AvatarDropdown";
 
 const Header = () => {
     const { currentUser } = useAuth();
@@ -68,9 +69,9 @@ const Header = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                 ></path>
                             </svg>
                             <svg
@@ -80,9 +81,9 @@ const Header = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                 ></path>
                             </svg>
                         </button>
@@ -90,13 +91,7 @@ const Header = () => {
 
                     <div className="flex items-center lg:order-2 gap-x-2">
                         <Notifications />
-
-
-                        <img
-                            className="w-10 h-10 rounded-full cursor-pointer"
-                            src={currentUser?.image}
-                            alt="Bordered avatar"
-                        />
+                        <AvatarDropdown />
                     </div>
                     <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"></div>
                 </div>
