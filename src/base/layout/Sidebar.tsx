@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from '@iconify/react';
 const Sidebar = () => {
     const [open, setOpen] = useState(true);
@@ -50,8 +50,17 @@ const Sidebar = () => {
             setActiveMenu(null);
         } else {
             setActiveMenu(index);
+            if (!open && Menus[index].children) {
+                setOpen(true);
+            }
         }
     };
+
+    useEffect(() => {
+        if (!open) {
+            setActiveMenu(null);
+        }
+    }, [open]);
 
     return (
         <div className="flex">
@@ -130,20 +139,28 @@ const Sidebar = () => {
                     {Menus.map((Menu, index) => (
                         <li key={index}>
                             <div
-                                className={`flex rounded-md p-3 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center gap-x-4 
+                                className={`flex justify-between rounded-md p-3 cursor-pointer hover:bg-gray-100 text-gray-900 text-sm items-center
                   ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-gray-100"
                                     }`}
                                 onClick={() => toggleMenu(index)}
                             >
-                                {Menu.icon}
-                                <span
-                                    className={`${!open && "hidden"} origin-left duration-200`}
-                                >
-                                    {Menu.title}
-                                </span>
+                                <div className="flex items-center gap-x-4">
+                                    {Menu.icon}
+                                    <span
+                                        className={`${!open && "hidden"} origin-left duration-200`}
+                                    >
+                                        {Menu.title}
+                                    </span>
+                                </div>
+                                {Menu.children && (
+                                    <Icon
+                                        icon="mingcute:down-fill"
+                                        className={`transition-transform duration-200 ${activeMenu === index ? 'rotate-180' : ''}`}
+                                    />
+                                )}
                             </div>
-                            {Menu.children && activeMenu === index && (
-                                <ul className="pl-4">
+                            {Menu.children && (
+                                <ul className={`pl-4 transition-[max-height] duration-300 overflow-hidden ${activeMenu === index ? 'max-h-40' : 'max-h-0'}`}>
                                     {Menu.children.map((child, childIndex) => (
                                         <li
                                             key={childIndex}
