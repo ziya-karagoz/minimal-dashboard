@@ -26,12 +26,13 @@ const Sidebar = () => {
 
     return (
         <div
-            className={
-                clsx("bg-white h-screen p-5  pt-8 relative duration-300 shadow-xl hidden lg:block", {
+            className={clsx(
+                "bg-white h-screen p-5  pt-8 relative duration-300 shadow-xl hidden lg:block",
+                {
                     "w-72": open,
                     "w-20": !open,
-                })
-            }
+                }
+            )}
         >
             <svg
                 className={`absolute cursor-pointer -right-3 top-9 w-7 border-gray-700 shadow-md
@@ -50,9 +51,15 @@ border-2 rounded-md  ${!open && "rotate-180"}`}
                     />
                 </g>
             </svg>
-            <div className="flex gap-x-4 items-center">
+            <div
+                className={clsx({
+                    "flex gap-x-4 items-center": open,
+                })}
+            >
                 <svg
-                    className={`cursor-pointer duration-500 ${open && "rotate-[360deg]"}`}
+                    className={clsx("cursor-pointer duration-500", {
+                        "rotate-[360deg]": open,
+                    })}
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
                     height="39"
@@ -93,8 +100,13 @@ border-2 rounded-md  ${!open && "rotate-180"}`}
                 </svg>
 
                 <h1
-                    className={`text-gray-900 origin-left font-medium text-xl duration-200 ${!open ? "scale-0" : ""
-                        }`}
+                    className={clsx(
+                        "text-gray-900 origin-left font-medium text-xl duration-200",
+                        {
+                            "flex gap-x-4 items-center": open,
+                            "scale-0 hidden": !open,
+                        }
+                    )}
                 >
                     My Panel
                 </h1>

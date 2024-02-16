@@ -10,7 +10,7 @@ const PrivateRoutes = () => {
         <Routes>
             <Route path="auth/*" element={<Navigate to="/dashboard" />} />
             <Route
-                path="/dashboard"
+                path="dashboard/*"
                 element={
                     <SuspensedView>
                         <DashboardPage />
