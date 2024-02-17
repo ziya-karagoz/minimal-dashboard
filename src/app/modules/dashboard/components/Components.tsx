@@ -89,7 +89,7 @@ const Components = () => {
         },
         {
             title: "Indicators",
-            icon: "bx:bx-radio-circle-marked",
+            icon: "ic:round-drag-indicator",
             content: <Docs.Indicator />,
         },
         {
