@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <div>
+      <a href="/dashboard/components" className="bg-gray-100 p-2">
+        View Components
+      </a>
+    </div>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

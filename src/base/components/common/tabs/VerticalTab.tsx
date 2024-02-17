@@ -30,7 +30,7 @@ const VerticalTab = ({ tabs }: Props) => {
                     </li>
                 ))}
             </ul>
-            <div className="p-6 bg-gray-50 text-medium text-gray-500 rounded-lg w-full">
+            <div className="p-6 bg-gray-50 text-medium text-gray-500 rounded-lg w-full flex-1">
                 {tabs.map(
                     (tab) =>
                         activeTab === tab.title && (
