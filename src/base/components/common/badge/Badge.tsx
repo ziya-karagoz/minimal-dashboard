@@ -11,7 +11,8 @@ type Props = {
     | "yellow"
     | "indigo"
     | "purple"
-    | "pink";
+    | "pink"
+    | "orange";
     size?: "xs" | "sm" | "md";
     bordered?: boolean;
     pill?: boolean;
@@ -42,6 +43,7 @@ const Badge = ({
                     "bg-indigo-100 text-indigo-800 border-indigo-600": color === "indigo",
                     "bg-purple-100 text-purple-800 border-purple-600": color === "purple",
                     "bg-pink-100 text-pink-800 border-pink-600": color === "pink",
+                    "bg-orange-100 text-orange-800 border-orange-600": color === "orange",
                     "border border-blue-600": bordered,
                     "rounded-full": pill,
                     rounded: !pill,
@@ -69,6 +71,7 @@ const Badge = ({
                     "bg-indigo-100 text-indigo-800 border-indigo-600": color === "indigo",
                     "bg-purple-100 text-purple-800 border-purple-600": color === "purple",
                     "bg-pink-100 text-pink-800 border-pink-600": color === "pink",
+                    "bg-orange-100 text-orange-800 border-orange-600": color === "orange",
                     "border": bordered,
                     "rounded-full": pill,
                     rounded: !pill,

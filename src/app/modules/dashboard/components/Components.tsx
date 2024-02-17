@@ -1,15 +1,14 @@
-import HorizontalTab from "@base/components/common/tabs/HorizontalTab";
 import VerticalTab from "@base/components/common/tabs/VerticalTab";
-
+import Docs from "./docs";
 const Components = () => {
     const tabs = [
         {
-            title: "Profile",
-            icon: "iconamoon:profile-fill",
-            content: "This is the content for the Profile tab.",
+            title: "Badges",
+            icon: "radix-icons:badge",
+            content: <Docs.Badge />,
         },
         {
-            title: "Dashboard",
+            title: "Accordions",
             icon: "ic:round-dashboard",
             content: (
                 <div className="text-red-500">
@@ -17,15 +16,12 @@ const Components = () => {
                 </div>
             ),
         },
-        // Add more tabs as needed
     ];
 
 
     return (
         <>
             <VerticalTab tabs={tabs} />
-            <br />
-            <HorizontalTab tabs={tabs} />
         </>
     );
 };

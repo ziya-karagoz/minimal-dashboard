@@ -15,7 +15,7 @@ const HorizontalTab = ({ tabs, decoration = "rounded" }: Props) => {
     const [activeTab, setActiveTab] = useState(tabs[0].title);
 
     const getTabClassNames = (isActive: boolean) => {
-        const baseClass = "inline-flex p-4 ";
+        const baseClass = "cursor-pointer inline-flex p-4 ";
         switch (decoration) {
             case "classic":
                 return `${baseClass} ${isActive ? "text-gray-900 bg-gray-200" : "hover:text-gray-900 bg-gray-50 hover:bg-gray-100"}`;
@@ -43,8 +43,7 @@ const HorizontalTab = ({ tabs, decoration = "rounded" }: Props) => {
                     <li key={tab.title} className={clsx({
                         "me-2": decoration !== "underline",
                     })}>
-                        <a
-                            href="#"
+                        <span
                             onClick={(e) => {
                                 e.preventDefault();
                                 setActiveTab(tab.title);
@@ -54,7 +53,7 @@ const HorizontalTab = ({ tabs, decoration = "rounded" }: Props) => {
                         >
                             {tab.icon && <Icon icon={tab.icon} className="me-2" />}
                             {tab.title}
-                        </a>
+                        </span>
                     </li>
                 ))}
             </ul>
@@ -64,7 +63,7 @@ const HorizontalTab = ({ tabs, decoration = "rounded" }: Props) => {
                         activeTab === tab.title && (
                             <div key={tab.title}>
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                                    {tab.title} Tab
+                                    {tab.title}
                                 </h3>
                                 <div>{tab.content}</div>
                             </div>
