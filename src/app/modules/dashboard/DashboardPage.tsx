@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import Dashboard from "./dashboard/Dashboard";
-import Components from "./dashboard/Components";
+import Components from "./components/Components";
 
 const DashboardPage = () => {
   return (
