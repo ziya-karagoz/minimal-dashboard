@@ -90,7 +90,7 @@ const Components = () => {
         {
             title: "Indicators",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: <Docs.Indicator />,
         },
         {
             title: "List Groups",
