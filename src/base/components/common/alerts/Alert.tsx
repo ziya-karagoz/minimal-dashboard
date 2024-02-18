@@ -16,7 +16,7 @@ type Props = {
     | "orange";
     bordered?: boolean;
     icon?: React.ReactNode | undefined;
-    dismissible?: boolean; // Correct the spelling of dismissible
+    dismissible?: boolean;
     dissmissIcon?: React.ReactNode;
     onDismiss?: () => void;
 };

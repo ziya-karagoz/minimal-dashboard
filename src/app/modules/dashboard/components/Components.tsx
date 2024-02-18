@@ -25,7 +25,7 @@ const Components = () => {
         {
             title: "Banners",
             icon: "bx:bx-message-square-detail",
-            content: "Not implemented yet.",
+            content: <Docs.Banner />
         },
         {
             title: "Bottom Navigations",
