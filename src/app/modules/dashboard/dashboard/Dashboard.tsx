@@ -1,3 +1,4 @@
+import Avatar from "@base/components/common/avatars/Avatar";
 import React from "react";
 
 const Dashboard = () => {
@@ -6,6 +7,7 @@ const Dashboard = () => {
       <a href="/dashboard/components" className="bg-gray-100 p-2">
         View Components
       </a>
+
     </div>
   );
 };

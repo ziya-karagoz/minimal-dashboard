@@ -15,7 +15,7 @@ const Components = () => {
         {
             title: "Avatars",
             icon: "bx:bx-user",
-            content: "Not implemented yet.",
+            content: <Docs.Avatar />,
         },
         {
             title: "Badges",
