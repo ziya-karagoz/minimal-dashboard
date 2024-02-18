@@ -1,6 +1,5 @@
 import Alert from "@base/components/common/alerts/Alert";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import React from "react";
 
 const CAlert = () => {
     return (

@@ -5,7 +5,7 @@ const Components = () => {
         {
             title: "Accordion",
             icon: "vaadin:accordion-menu",
-            content: "Not implemented yet."
+            content: <Docs.Accordion />,
         },
         {
             title: "Alerts",
@@ -15,7 +15,7 @@ const Components = () => {
         {
             title: "Avatars",
             icon: "bx:bx-user",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Badges",
@@ -25,67 +25,67 @@ const Components = () => {
         {
             title: "Banners",
             icon: "bx:bx-message-square-detail",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Bottom Navigations",
             icon: "bx:bx-menu",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Breadcrumbs",
-            icon: "bx:bx-menu",
-            content: "Not implemented yet."
+            icon: "tdesign:component-breadcrumb",
+            content: <Docs.BreadCrumb />,
         },
         {
             title: "Buttons",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Button Groups",
             icon: "bx:bx-menu",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Cards",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Carousels",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Chat Bubbles",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Device Mockups",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Drawers",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Dropdowns",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Footers",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Galleries",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Indicators",
@@ -95,57 +95,57 @@ const Components = () => {
         {
             title: "List Groups",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Modals",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Pagination",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Popover",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Proggress",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Ratings",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Skeletons",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Speed Dials",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Spinners",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Steppers",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Tables",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Tabs",
@@ -155,17 +155,14 @@ const Components = () => {
         {
             title: "Timelines",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
         {
             title: "Tooltips",
             icon: "bx:bx-radio-circle-marked",
-            content: "Not implemented yet."
+            content: "Not implemented yet.",
         },
-
-
     ];
-
 
     return (
         <>
