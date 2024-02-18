@@ -10,7 +10,7 @@ const Components = () => {
         {
             title: "Alerts",
             icon: "bx:bx-bell",
-            content: "Not implemented yet."
+            content: <Docs.Alert />,
         },
         {
             title: "Avatars",
