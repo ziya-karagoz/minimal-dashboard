@@ -2,7 +2,7 @@ import api from "../../../../helpers/enhencers/Interceptor";
 import { IFilterResponse } from "./models";
 import { IColumnFilterParams } from "./models";
 
-const baseUrl = import.meta.env.VITE_APP_API_URL;
+const baseUrl = import.meta.env.VITE_API_URL;
 
 export function fetchColumnFilter(
   params: IColumnFilterParams

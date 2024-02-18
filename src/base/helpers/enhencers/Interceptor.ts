@@ -5,7 +5,7 @@ import axios, {
   InternalAxiosRequestConfig,
 } from "axios";
 
-const I18N_CONFIG_KEY = import.meta.env.VITE_APP_I18N_CONFIG_KEY || "i18n";
+const I18N_CONFIG_KEY = import.meta.env.VITE_I18N_CONFIG_KEY || "i18n";
 
 const AUTH_LOCAL_STORAGE_KEY =
   import.meta.env.VITE_AUTH_LOCAL_STORAGE_KEY || "accessToken";

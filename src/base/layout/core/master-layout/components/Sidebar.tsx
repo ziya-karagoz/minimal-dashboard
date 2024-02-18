@@ -1,12 +1,20 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menus } from "../../data";
 import clsx from "clsx";
 import { hasPermissionMany } from "@base/helpers/permissions/permission.helper";
 
+const SIDEBAR_CONFIG_KEY = import.meta.env.VITE_SIDEBAR_CONFIG_KEY;
+
 const Sidebar = () => {
-    const [open, setOpen] = useState(true);
+    //const isopenLocalStorage = JSON.parse(localStorage.getItem(SIDEBAR_CONFIG_KEY) || "true");
+
+    const memoizedIsOpenLocalStorage = useMemo(() => {
+        return JSON.parse(localStorage.getItem(SIDEBAR_CONFIG_KEY) || "true");
+    }, []);
+
+    const [open, setOpen] = useState(memoizedIsOpenLocalStorage);
     const [activeMenu, setActiveMenu] = useState(null);
 
     const toggleMenu = (index: any) => {
@@ -15,9 +23,14 @@ const Sidebar = () => {
         } else {
             setActiveMenu(index);
             if (!open && Menus[index].children) {
-                setOpen(true);
+                changeOpen(true);
             }
         }
+    };
+
+    const changeOpen = (isOpen: boolean) => {
+        setOpen(isOpen);
+        localStorage.setItem(SIDEBAR_CONFIG_KEY, JSON.stringify(isOpen));
     };
 
     useEffect(() => {
@@ -43,7 +56,7 @@ const Sidebar = () => {
             )}>
                 <svg
                     className={`absolute cursor-pointer -right-3 top-9 w-7 border-2 border-gray-700 shadow-mdborder-2 rounded-md  ${!open && "rotate-180"}`}
-                    onClick={() => setOpen(!open)}
+                    onClick={() => changeOpen(!open)}
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
                     height="1em"
