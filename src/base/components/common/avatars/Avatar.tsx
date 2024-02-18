@@ -2,6 +2,7 @@ import React from 'react';
 import Indicator from "@base/components/common/indicators/Indicator";
 import clsx from 'clsx';
 
+
 type AvatarProps = {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     shape?: 'rounded' | 'circle';
