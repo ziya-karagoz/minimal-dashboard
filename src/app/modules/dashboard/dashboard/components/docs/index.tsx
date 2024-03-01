@@ -3,7 +3,11 @@ import CAlert from "./alert";
 import CAvatar from "./avatar";
 import CBadge from "./badge";
 import CBanner from "./banner";
+import CBottomNavigation from "./bottom-navigation";
 import CBreadcrumb from "./breadcrumb";
+import CButton from "./button";
+import CButtonGroup from "./button-group";
+import Ccard from "./card";
 import CIndicator from "./indicator";
 import CTabnav from "./tabnav";
 
@@ -19,5 +23,9 @@ Docs.BreadCrumb = CBreadcrumb;
 Docs.Accordion = CAccordion;
 Docs.Avatar = CAvatar;
 Docs.Banner = CBanner;
+Docs.BottomNavigation = CBottomNavigation;
+Docs.Button = CButton;
+Docs.ButtonGroup = CButtonGroup;
+Docs.Card = Ccard;
 
 export default Docs;

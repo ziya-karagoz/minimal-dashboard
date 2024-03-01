@@ -1,6 +1,5 @@
 import HorizontalTab from '@base/components/common/tabs/HorizontalTab';
 import VerticalTab from '@base/components/common/tabs/VerticalTab'
-import React from 'react'
 
 const examnpleTabs = [
     {

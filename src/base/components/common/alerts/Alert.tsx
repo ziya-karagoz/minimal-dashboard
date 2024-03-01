@@ -17,11 +17,11 @@ type Props = {
     bordered?: boolean;
     icon?: React.ReactNode | undefined;
     dismissible?: boolean;
-    dissmissIcon?: React.ReactNode;
+    dismissIcon?: React.ReactNode;
     onDismiss?: () => void;
 };
 
-const Alert = ({ children, color = "blue", bordered = false, icon = undefined, dismissible = false, onDismiss, dissmissIcon }: Props) => {
+const Alert = ({ children, color = "blue", bordered = false, icon = undefined, dismissible = false, onDismiss, dismissIcon }: Props) => {
     const [isVisible, setIsVisible] = useState(true);
 
     const handleDismiss = () => {
@@ -55,7 +55,7 @@ const Alert = ({ children, color = "blue", bordered = false, icon = undefined, d
                     </div>
                     {dismissible ? (
 
-                        dissmissIcon ? dissmissIcon : <button
+                        dismissIcon ? dismissIcon : <button
                             onClick={handleDismiss}
                             className="text-gray-400 hover:text-gray-500"
                         >

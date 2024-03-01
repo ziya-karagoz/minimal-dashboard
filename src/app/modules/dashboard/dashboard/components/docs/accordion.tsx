@@ -1,7 +1,6 @@
 import Accordion from '@base/components/common/accordions/Accordion'
 import Alert from '@base/components/common/alerts/Alert'
 import HorizontalTab from '@base/components/common/tabs/HorizontalTab'
-import React from 'react'
 
 const CAccordion = () => {
 
@@ -10,7 +9,7 @@ const CAccordion = () => {
             <div className='ms-4 mb-4'>
                 <h5 className="mb-2 text-gray-600 text-xl">Default</h5>
                 <div>
-                    <Accordion style="default" alwaysOpen>
+                    <Accordion style="default">
                         <Accordion.Item eventKey="0">
                             <Accordion.Header eventKey="0">Accordion Item #1</Accordion.Header>
                             <Accordion.Body eventKey="0">

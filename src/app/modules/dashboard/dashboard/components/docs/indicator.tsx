@@ -1,5 +1,4 @@
 import Indicator from '@base/components/common/indicators/Indicator'
-import React from 'react'
 
 const CIndicator = () => {
     return (
