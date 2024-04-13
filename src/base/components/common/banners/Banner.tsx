@@ -1,26 +1,11 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import clsx from "clsx";
 import React, { useState } from "react";
+import { BannerProps } from "./Banner.types";
 
-type Props = {
-    icon?: React.ReactNode;
-    children: React.ReactNode;
-    dismissible?: boolean;
-    dismissIcon?: React.ReactNode;
-    onDismiss?: () => void;
-    color?:
-    | "blue"
-    | "gray"
-    | "red"
-    | "green"
-    | "yellow"
-    | "indigo"
-    | "purple"
-    | "pink"
-    | "orange";
-};
 
-const Banner: React.FC<Props> = ({
+
+const Banner: React.FC<BannerProps> = ({
     icon,
     children,
     dismissible = false,

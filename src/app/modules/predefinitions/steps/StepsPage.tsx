@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router'
 import StepList from './step-list/StepList'
 import EditStep from './edit-step/EditStep'
-import Breadcrumb from '@base/components/common/breadcrumbs/BreadCrumb'
+import Breadcrumb from '@base/components/common/breadcrumbs/Breadcrumb'
 
 const StepsPage = () => {
     return (

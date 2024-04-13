@@ -1,30 +1,10 @@
 import clsx from 'clsx';
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { BottomNavigationProps } from './BottomNavigation.types';
 
-type Props = {
-    items: {
-        icon: React.ReactNode
-        content: React.ReactNode
-        to: string
-    }[];
-    color?:
-    | "blue"
-    | "gray"
-    | "red"
-    | "green"
-    | "yellow"
-    | "indigo"
-    | "purple"
-    | "pink"
-    | "orange";
-    bordered?: boolean;
-    visibleAt?: "sm" | "md" | "lg" | "xl";
-    type?: "default" | "appbar"
 
-}
-
-const BottomNavigation: React.FC<Props> = ({ items, color = "blue", bordered = false, type = "default" }) => {
+const BottomNavigation: React.FC<BottomNavigationProps> = ({ items, color = "blue", bordered = false, type = "default" }) => {
 
     if (type === "default") {
 
@@ -33,7 +13,7 @@ const BottomNavigation: React.FC<Props> = ({ items, color = "blue", bordered = f
                 <div className="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
                     {
                         items.map((item, index) => (
-                            <NavLink key={index} to={item.to} className={
+                            <Link key={index} to={item.to} className={
                                 clsx("inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50", {
                                     "border-x": bordered,
                                 })
@@ -67,7 +47,7 @@ const BottomNavigation: React.FC<Props> = ({ items, color = "blue", bordered = f
                                     {item.content}
                                 </div>
 
-                            </NavLink>
+                            </Link>
                         ))
                     }
                 </div>
@@ -78,11 +58,20 @@ const BottomNavigation: React.FC<Props> = ({ items, color = "blue", bordered = f
     else {
         return (
             <div className="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-4 left-1/2 ">
-                <div className={`grid h-full max-w-lg grid-cols-${items.length} mx-auto`}>
+                <div className={clsx("grid h-full max-w-lg mx-auto",{
+                    "grid-cols-3": items.length === 3,
+                    "grid-cols-4": items.length === 4,
+                    "grid-cols-5": items.length === 5,
+                    "grid-cols-6": items.length === 6,
+                    "grid-cols-7": items.length === 7,
+                    "grid-cols-8": items.length === 8,
+                    "grid-cols-9": items.length === 9,
+                    "grid-cols-10": items.length === 10,
+                })}>
                     {
                         items.map((item, index) => (
 
-                            <NavLink key={index} to={item.to} className={
+                            <Link key={index} to={item.to} className={
                                 clsx("inline-flex flex-col items-center justify-center px-5 rounded-e-full rounded-s-full hover:bg-gray-50 ", {
                                     "border-x": bordered,
                                 })
@@ -116,7 +105,7 @@ const BottomNavigation: React.FC<Props> = ({ items, color = "blue", bordered = f
                                     {item.content}
                                 </div>
 
-                            </NavLink>
+                            </Link>
                         ))
                     }
 

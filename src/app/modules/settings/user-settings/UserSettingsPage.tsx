@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import UserSettingList from "./user-settting-list/UserSettingList";
 import EditUserSetting from "./edit-user-setting/EditUserSetting";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const SettingsPage = () => {
     return (

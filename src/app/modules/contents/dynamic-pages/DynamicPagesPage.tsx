@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import DynamicPageList from "./dynamic-page-list/DynamicPageList";
 import AddDynamicPage from "./add-dynamic-page/AddDynamicPage";
 import EditDynamicPage from "./edit-dynamic-page/EditDynamicPage";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const DynamicPagesPage = () => {
   return (

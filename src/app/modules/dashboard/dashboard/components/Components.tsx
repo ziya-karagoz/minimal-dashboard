@@ -35,7 +35,7 @@ const Components = () => {
     {
       title: "Breadcrumbs",
       icon: "tdesign:component-breadcrumb",
-      content: <Docs.BreadCrumb />,
+      content: <Docs.Breadcrumb />,
     },
     {
       title: "Buttons",

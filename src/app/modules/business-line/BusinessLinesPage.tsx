@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import BusinessLineList from "./business-line-list/BusinessLineList";
 import AddBusinessLine from "./add-business-line/AddBusinessLine";
 import BusinessLineDetail from "./business-line-detail/BusinessLineDetail";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const BusinessLinePage = () => {
 

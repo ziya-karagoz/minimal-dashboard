@@ -1,4 +1,4 @@
-import Breadcrumb from '@base/components/common/breadcrumbs/BreadCrumb'
+import Breadcrumb from '@base/components/common/breadcrumbs/Breadcrumb'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 

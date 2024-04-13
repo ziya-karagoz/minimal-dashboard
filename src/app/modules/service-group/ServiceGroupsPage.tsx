@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import ServiceGroupList from "./service-group-list/ServiceGroupList";
 import AddServiceGroup from "./add-service-group/AddServiceGroup";
 import ServiceGroupDetail from "./service-group-detail/ServiceGroupDetail";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const ServiceGroupPage = () => {
 

@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router'
 import BankList from './bank-list/BankList'
 import AddBank from './add-bank/AddBank'
 import EditBank from './edit-bank/Editbank'
-import Breadcrumb from '@base/components/common/breadcrumbs/BreadCrumb'
+import Breadcrumb from '@base/components/common/breadcrumbs/Breadcrumb'
 
 const BanksPage = () => {
     return (

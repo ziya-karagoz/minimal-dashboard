@@ -3,7 +3,7 @@ import UserList from "./user-list/UserList";
 import AddUser from "./add-user/AddUser";
 import EditUser from "./edit-user/EditUser";
 import UserSettings from "./user-settings/UserSettings";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const UsersPage = () => {
   return (

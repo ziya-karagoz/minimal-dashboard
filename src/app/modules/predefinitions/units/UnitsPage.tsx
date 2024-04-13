@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router'
 import UnitList from './unit-list/UnitList'
 import AddUnit from './add-unit/AddUnit'
 import EditUnit from './edit-unit/EditUnit'
-import Breadcrumb from '@base/components/common/breadcrumbs/BreadCrumb'
+import Breadcrumb from '@base/components/common/breadcrumbs/Breadcrumb'
 
 const UnitsPage = () => {
     return (

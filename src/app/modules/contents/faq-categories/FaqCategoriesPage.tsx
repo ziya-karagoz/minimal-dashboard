@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import FaqCategoryList from "./list-faq-category/FaqCategoryList";
 import AddFaqCategory from "./add-faq-category/AddFaqCategory";
 import EditFaqCategory from "./edit-faq-category/EditFaqCategory";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const FaqCategoriesPage = () => {
   return (

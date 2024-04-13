@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import ContactList from "./contact-list/ContactList";
 import ContactDetail from "./contact-detail/ContactDetail";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const ContactPage = () => {
     return (

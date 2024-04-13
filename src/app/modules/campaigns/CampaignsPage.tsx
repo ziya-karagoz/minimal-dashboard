@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import CampaignList from "./campaign-list/CampaignList.tsx";
 import AddCampaign from "./add-campaign/AddCampaign.tsx";
 import EditCampaign from "./edit-campaign/EditCampaign.tsx";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb.tsx";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb.tsx";
 
 const CampaignsPage = () => {
   return (

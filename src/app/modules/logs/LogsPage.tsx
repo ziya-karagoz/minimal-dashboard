@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import LogList from "./log-list/LogList";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const LogsPage = () => {
   return (

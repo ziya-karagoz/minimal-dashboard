@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import FileBrowser from "./file-manager/FileBrowser";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const FileManagerPage = () => {
   return (

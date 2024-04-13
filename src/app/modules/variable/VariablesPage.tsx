@@ -3,7 +3,7 @@ import VariableList from "./variable-list/VariableList";
 import AddVariable from "./add-variable/AddVariable";
 import EditVariable from "./edit-variable/EditVariable";
 import VariableUsageList from "./variable-usage-list/VariableUsageList";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const VariablesPage = () => {
     return (

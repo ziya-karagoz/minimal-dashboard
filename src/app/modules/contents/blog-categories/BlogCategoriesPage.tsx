@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import BlogCategoryList from "./blog-category-list/BlogCategoryList.tsx";
 import AddBlogCategory from "./add-blog-category/AddBlogCategory.tsx";
 import EditBlogCategory from "./edit-blog-category/EditBlogCategory.tsx";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb.tsx";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb.tsx";
 
 const BlogCategoriesPage = () => {
   return (

@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import SectorList from "./sector-list/SectorList";
 import AddSector from "./add-sector/AddSector";
 import EditSector from "./edit-sector/EditSector";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const SectorsPage = () => {
     return (

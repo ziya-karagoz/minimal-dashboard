@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import EcommerceSettings from "./ecommerce-settings/EcommerceSettings";
 import UserSettings from "./user-settings/UserSettingsPage";
 import SystemSettings from "./system-settings/SystemSettings";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const SettingsPage = () => {
     return (

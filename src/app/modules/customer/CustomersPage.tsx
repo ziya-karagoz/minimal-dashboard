@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import CustomerList from "./customer-list/CustomerList";
 import AddCustomer from "./add-customer/AddCustomer";
 import EditCustomer from "./edit-customer/EditCustomer";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const CustomersPage = () => {
   return (

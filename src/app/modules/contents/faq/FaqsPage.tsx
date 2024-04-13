@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import FaqList from "./list-faq/FaqList";
 import AddFaq from "./add-faq/AddFaq";
 import EditFaq from "./edit-faq/EditFaq";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const FaqsPage = () => {
   return (

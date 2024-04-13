@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import ServiceList from "./service-list/ServiceList";
 import AddService from "./add-service/AddService";
 import ServiceDetail from "./service-detail/ServiceDetail";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const ServicePage = () => {
 

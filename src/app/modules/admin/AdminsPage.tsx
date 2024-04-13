@@ -3,7 +3,7 @@ import AdminList from "./admin-list/AdminList";
 import AddAdmin from "./add-admin/AddAdmin";
 import EditAdmin from "./edit-admin/EditAdmin";
 import AdminSettings from "./admin-settings/AdminSettings";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const AdminsPage = () => {
   return (

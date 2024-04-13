@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import BlogList from "./list-blog/BlogList";
 import AddBlog from "./add-blog/AddBlog";
 import EditBlog from "./edit-blog/EditBlog";
-import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
+import Breadcrumb from "@base/components/common/breadcrumbs/Breadcrumb";
 
 const BlogsPage = () => {
   return (
