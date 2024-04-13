@@ -11,7 +11,6 @@ const Avatar: React.FC<AvatarProps> = ({
   alt,
   className,
   bordered,
-  type = "default",
   indicator,
 }) => {
   const sizeClasses = {
@@ -49,7 +48,7 @@ const Avatar: React.FC<AvatarProps> = ({
   const avatarClass = `${sizeClasses[size]} ${shapeClasses[shape]} ${borderClass} ${className || ""}`;
 
   const renderIndicator = () => {
-    if (type === "default" && indicator && indicator.color) {
+    if (indicator && indicator.color) {
       return <Indicator color={indicator.color} />;
     }
     return null;

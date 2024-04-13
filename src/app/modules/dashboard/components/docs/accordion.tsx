@@ -11,15 +11,15 @@ const CAccordion = () => {
                 <div>
                     <Accordion style="default">
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header eventKey="0">Accordion Item #1</Accordion.Header>
-                            <Accordion.Body eventKey="0">
+                            <Accordion.Header>Accordion Item #1</Accordion.Header>
+                            <Accordion.Body>
                                 <Alert dismissible color="blue">This is a blue alert</Alert>
 
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
-                            <Accordion.Header eventKey="1">Accordion Item #2</Accordion.Header>
-                            <Accordion.Body eventKey="1">
+                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                            <Accordion.Body>
                                 <HorizontalTab tabs={[
                                     {
                                         title: "Example 1",
@@ -45,15 +45,15 @@ const CAccordion = () => {
                 <div>
                     <Accordion style="flush" alwaysOpen>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header eventKey="0">Accordion Item #1</Accordion.Header>
-                            <Accordion.Body eventKey="0">
+                            <Accordion.Header>Accordion Item #1</Accordion.Header>
+                            <Accordion.Body>
                                 <Alert dismissible color="blue">This is a blue alert</Alert>
 
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
-                            <Accordion.Header eventKey="1">Accordion Item #2</Accordion.Header>
-                            <Accordion.Body eventKey="1">
+                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                            <Accordion.Body>
                                 <HorizontalTab tabs={[
                                     {
                                         title: "Example 1",

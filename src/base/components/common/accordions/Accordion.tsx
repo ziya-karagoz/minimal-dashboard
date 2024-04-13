@@ -1,30 +1,13 @@
 import clsx from "clsx";
 import React, { useContext, useState, useRef, useEffect } from "react";
+import { AccordionBodyProps, AccordionHeaderProps, AccordionItemProps, AccordionProps } from "./Accordion.types";
 
-type AccordionProps = {
-    defaultActiveKey?: string | string[];
-    multiExpandable?: boolean;
-    alwaysOpen?: boolean;
-    style: "default" | "flush";
-    children: React.ReactNode;
-};
 
-type AccordionItemProps = {
-    eventKey: string;
-    children: React.ReactNode;
-};
-
-type AccordionHeaderProps = {
-    children: React.ReactNode;
-    eventKey: string;
-};
-
-type AccordionBodyProps = {
-    children: React.ReactNode;
-    eventKey: string;
-};
-
-const AccordionContext = React.createContext<{ activeKeys: string[]; setActiveKey: (key: string) => void } | undefined>(undefined);
+const AccordionContext = React.createContext<{
+    activeKeys: string[];
+    setActiveKey: (key: string) => void;
+    currentEventKey?: string;
+} | undefined>(undefined);
 
 const Accordion: React.FC<AccordionProps> & {
     Item: React.FC<AccordionItemProps>;
@@ -60,22 +43,20 @@ const Accordion: React.FC<AccordionProps> & {
 };
 
 const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, children }) => {
-    const enhancedChildren = React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
-            return React.cloneElement(child, { eventKey } as React.Attributes);
-        }
-        return child;
-    });
-
-    return <div>{enhancedChildren}</div>;
+    const { activeKeys, setActiveKey } = useContext(AccordionContext)!;
+    return (
+        <AccordionContext.Provider value={{ activeKeys, setActiveKey, currentEventKey: eventKey }}>
+            <div>{children}</div>
+        </AccordionContext.Provider>
+    );
 };
 
-const AccordionHeader: React.FC<AccordionHeaderProps & { eventKey: string }> = ({ children, eventKey }) => {
-    const { activeKeys, setActiveKey } = useContext(AccordionContext)!;
-    const isActive = activeKeys.includes(eventKey);
+const AccordionHeader: React.FC<AccordionHeaderProps> = ({ children }) => {
+    const { activeKeys, setActiveKey, currentEventKey } = useContext(AccordionContext)!;
+    const isActive = activeKeys.includes(currentEventKey!);
 
     const handleClick = () => {
-        setActiveKey(eventKey);
+        setActiveKey(currentEventKey!);
     };
 
     return (
@@ -107,9 +88,9 @@ const AccordionHeader: React.FC<AccordionHeaderProps & { eventKey: string }> = (
     );
 };
 
-const AccordionBody: React.FC<AccordionBodyProps & { eventKey: string }> = ({ children, eventKey }) => {
-    const { activeKeys } = useContext(AccordionContext)!;
-    const isActive = activeKeys.includes(eventKey);
+const AccordionBody: React.FC<AccordionBodyProps> = ({ children }) => {
+    const { activeKeys, currentEventKey } = useContext(AccordionContext)!;
+    const isActive = activeKeys.includes(currentEventKey!);
     const contentRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(isActive ? 'auto' : '0');
 
