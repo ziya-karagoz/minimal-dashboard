@@ -1,27 +1,11 @@
 import clsx from "clsx";
 import React, { useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { AlertProps } from "./Alert.types";
 
-type Props = {
-    children?: React.ReactNode;
-    color?:
-    | "blue"
-    | "gray"
-    | "red"
-    | "green"
-    | "yellow"
-    | "indigo"
-    | "purple"
-    | "pink"
-    | "orange";
-    bordered?: boolean;
-    icon?: React.ReactNode | undefined;
-    dismissible?: boolean;
-    dismissIcon?: React.ReactNode;
-    onDismiss?: () => void;
-};
 
-const Alert = ({ children, color = "blue", bordered = false, icon = undefined, dismissible = false, onDismiss, dismissIcon }: Props) => {
+
+const Alert = ({ children, color = "blue", bordered = false, icon = undefined, dismissible = false, onDismiss, dismissIcon }: AlertProps) => {
     const [isVisible, setIsVisible] = useState(true);
 
     const handleDismiss = () => {

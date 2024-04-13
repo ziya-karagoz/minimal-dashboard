@@ -1,26 +1,9 @@
 import clsx from 'clsx';
-import React from 'react'
+import { IndicatorProps } from './Indicator.types';
 
 
-type Props = {
-    color?:
-    | "blue"
-    | "gray"
-    | "red"
-    | "green"
-    | "yellow"
-    | "indigo"
-    | "purple"
-    | "pink"
-    | "orange";
-    children?: React.ReactNode
-}
 
-
-const Indicator = ({ color = "blue", children }: Props) => {
-    // return (
-    //     <span className="flex items-center text-sm font-medium text-gray-900 me-3"><span className="flex w-2.5 h-2.5 bg-teal-500 rounded-full me-1.5 flex-shrink-0"></span>Revenue</span>
-    // )
+const Indicator = ({ color = "blue", children }: IndicatorProps) => {
     return (
         <span className={`flex items-center text-sm font-medium text-gray-900 me-3`}>
             <span className={clsx("flex w-2.5 h-2.5 rounded-full me-1.5 flex-shrink-0", {

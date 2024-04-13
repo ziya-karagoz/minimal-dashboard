@@ -1,26 +1,7 @@
 import clsx from "clsx";
-import React from "react";
+import { BadgeProps } from "./Badge.types";
 
-type Props = {
-    className?: string;
-    children?: React.ReactNode;
-    color?:
-    "blue"
-    | "gray"
-    | "red"
-    | "green"
-    | "yellow"
-    | "indigo"
-    | "purple"
-    | "pink"
-    | "orange";
-    size?: "xs" | "sm" | "md";
-    bordered?: boolean;
-    pill?: boolean;
-    link?: string | undefined;
-    icon?: React.ReactNode | undefined;
-    iconDirection?: "left" | "right";
-};
+
 
 const Badge = ({
     className,
@@ -32,7 +13,7 @@ const Badge = ({
     link = undefined,
     icon = undefined,
     iconDirection = "left",
-}: Props) => {
+}: BadgeProps) => {
     if (!link) {
         return (
             <span
