@@ -74,9 +74,9 @@ const Avatar: React.FC<AvatarProps> = ({
                 <img className={avatarClass} src={src} alt={alt || 'Avatar'} />
             ) : (
                 <div
-                    className={`${avatarClass} flex items-center justify-center bg-gray-100 dark:bg-gray-600`}
+                    className={`${avatarClass} flex items-center justify-center bg-gray-100`}
                 >
-                    <span className="font-medium text-gray-600 dark:text-gray-300">{initial}</span>
+                    <span className="font-medium text-gray-600">{initial}</span>
                 </div>
             )}
             <div className={

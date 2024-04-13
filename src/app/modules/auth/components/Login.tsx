@@ -52,7 +52,7 @@ const Login = () => {
       <Helmet>
         <title> Konutkonfor Admin | Login </title>
       </Helmet>
-      <section className="bg-gray-50 h-screen dark:bg-gray-900">
+      <section className="bg-gray-50 h-screen">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <a
             href="#"
@@ -96,7 +96,7 @@ const Login = () => {
                   />
                   {
                     formik.touched.email && formik.errors.email ? (
-                      <p className="mt-2 text-sm text-red-600 dark:text-red-500">{formik.errors.email}</p>
+                      <p className="mt-2 text-sm text-red-600">{formik.errors.email}</p>
                     ) : null
                   }
                 </div>
@@ -118,7 +118,7 @@ const Login = () => {
                   />
                   {
                     formik.touched.password && formik.errors.password ? (
-                      <p className="mt-2 text-sm text-red-600 dark:text-red-500">{formik.errors.password}</p>
+                      <p className="mt-2 text-sm text-red-600">{formik.errors.password}</p>
                     ) : null
                   }
 

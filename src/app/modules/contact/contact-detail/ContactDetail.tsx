@@ -318,7 +318,7 @@ const ContactDetail = () => {
           <div className="w-full mt-1">
             <label
               htmlFor="default-search"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only"
             >
               Gönder
             </label>
