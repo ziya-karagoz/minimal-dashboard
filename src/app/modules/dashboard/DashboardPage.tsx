@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router";
 import Dashboard from "./dashboard/Dashboard";
-import Components from "./dashboard/components/Components";
+import Components from "./components/Components";
+import Breadcrumb from "@base/components/common/breadcrumbs/BreadCrumb";
 
 const DashboardPage = () => {
   return (
@@ -9,6 +10,7 @@ const DashboardPage = () => {
         path="/"
         element={
           <>
+
             <Dashboard />
           </>
         }
@@ -17,6 +19,20 @@ const DashboardPage = () => {
         path="components"
         element={
           <>
+            <Breadcrumb
+              items={[
+                {
+                  link: "/",
+                  name: "Anasayfa",
+                },
+                {
+                  link: "/anasayfa/components",
+                  name: "Geliştirici Araçları",
+                },
+              ]}
+              color="red"
+              style="solid"
+            />
             <Components />
           </>
         }

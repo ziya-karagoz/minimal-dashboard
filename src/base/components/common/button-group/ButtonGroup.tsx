@@ -16,6 +16,7 @@ type Props = {
         content: string;
         icon?: React.ReactNode;
         to?: string;
+        active?: boolean;
         onClick?: React.MouseEventHandler<HTMLButtonElement>;
     }[];
     outlined?: boolean;

@@ -27,6 +27,6 @@
       "@app/*": ["./src/app/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "types/quill.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

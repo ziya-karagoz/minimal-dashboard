@@ -1,6 +1,6 @@
 import { AuthInit } from "@app/modules/auth";
 import { I18nProvider } from "@base/i18n/i18nProvider";
-import { LayoutSplashScreen } from "@base/layout/BaseSplasyScreen";
+import { LayoutSplashScreen } from "@base/layout/contexts/BaseSplasyScreen";
 import { MasterLayout } from "@base/layout/core/master-layout";
 import { Suspense } from "react";
 

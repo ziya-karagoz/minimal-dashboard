@@ -1,6 +1,6 @@
 import { useAuth } from "@app/modules/auth";
 import Avatar from "@base/components/common/avatars/Avatar";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 
 const AvatarDropdown = () => {
@@ -28,26 +28,10 @@ const AvatarDropdown = () => {
                     >
                         <li>
                             <a
-                                href="#"
+                                href={`/yoneticiler/duzenle/${currentUser?.id}`}
                                 className="block px-4 py-2 hover:bg-gray-100 "
                             >
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 "
-                            >
-                                Settings
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 hover:bg-gray-100 "
-                            >
-                                Earnings
+                                Hesabım
                             </a>
                         </li>
                     </ul>

@@ -3,7 +3,7 @@ import { CurrentUserModel, LoginResponse } from "./_models";
 import api from "@base/helpers/enhencers/Interceptor";
 
 const APP_URL = import.meta.env.VITE_API_URL;
-export const LOGIN_URL = `${APP_URL}/api/backoffice/auth/login`;
+export const LOGIN_URL = `${APP_URL}/api/backoffice/auth/admin/login`;
 export const REQUEST_PASSWORD_URL = `${APP_URL}/forgot_password`;
 
 export function login(email: string, password: string): Promise<LoginResponse> {

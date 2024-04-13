@@ -1,6 +1,7 @@
 export interface LoginRequest {
   email: string;
   password: string;
+  rememberMe: boolean;
 }
 
 export interface LoginResponse {
@@ -38,7 +39,3 @@ export interface CurrentUserModel {
 export type LogoutOptions = {
   alert?: boolean;
 };
-export interface apiResponse {
-  statusCode: string,
-  message: string
-}

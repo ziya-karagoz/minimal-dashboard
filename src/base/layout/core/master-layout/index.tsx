@@ -20,9 +20,10 @@ const MasterLayout = () => {
         <React.Fragment>
             <div className="flex">
                 <Sidebar />
-                <div className="min-h-screen flex-1">
+                <div className="min-h-screen flex-1 overflow-hidden">
                     <Header />
-                    <div className=" p-7">
+                    {/* 4rem is the height of the header bar which is h-16 */}
+                    <div className=" p-7 min-h-[calc(100vh-4rem)]">
                         <Outlet />
                     </div>
                 </div>

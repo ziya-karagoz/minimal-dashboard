@@ -5,6 +5,13 @@ import axios, {
   InternalAxiosRequestConfig,
 } from "axios";
 
+// error type is a type that we defined in our backend and its structure is like this:
+// AxiosError<{ error?: string, message?: string[] }>
+export type BackendErrorTemplate = AxiosError<{
+  statusCode?: number;
+  message?: string;
+}>;
+
 const I18N_CONFIG_KEY = import.meta.env.VITE_I18N_CONFIG_KEY || "i18n";
 
 const AUTH_LOCAL_STORAGE_KEY =
@@ -43,23 +50,44 @@ api.interceptors.response.use(
     return response.data;
   },
   (error: AxiosError) => {
-    // Client Errors
     if (error.response) {
-      if (error.response.status === 401) {
-        localStorage.removeItem(AUTH_LOCAL_STORAGE_KEY);
-        sessionStorage.removeItem(AUTH_LOCAL_STORAGE_KEY);
-        swal
-          .fire({
-            title: "Yetkiniz Yok",
-            text: "Oturum Süreniz dolmuş ya da Yetkinleriniz düzenlenmiş olabilir. Lütfen tekrar giriş yapınız.",
+      // Client Errors
+      if (error.response.status >= 400 && error.response.status < 500) {
+        if (error.response.status === 401) {
+          let backendError = error as BackendErrorTemplate;
+          localStorage.removeItem(AUTH_LOCAL_STORAGE_KEY);
+          sessionStorage.removeItem(AUTH_LOCAL_STORAGE_KEY);
+          swal
+            .fire({
+              title: "Error",
+              text:
+                backendError.response?.data.message || "Something went wrong",
+              icon: "error",
+            })
+            .then(() => {
+              window.location.href = "/auth";
+            });
+        } else {
+          let backendError = error as BackendErrorTemplate;
+          swal.fire({
+            title: "Error",
+            text: backendError.response?.data.message || "Something went wrong",
+            icon: "error",
+          });
+        }
+      }
+      // Server Errors
+      if (error.response.status >= 500) {
+        console.error(error);
+        if (error.response.status === 500) {
+          swal.fire({
+            title: "Internal Server Error",
+            text: "Please try again later",
             icon: "error",
             confirmButtonText: "Ok",
-          })
-          .then(() => {
-            window.location.href = "/auth";
           });
+        }
       }
-      console.error("ERROR::::", error.response);
 
       return Promise.reject(error);
     }

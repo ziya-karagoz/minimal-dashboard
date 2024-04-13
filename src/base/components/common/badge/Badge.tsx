@@ -2,9 +2,10 @@ import clsx from "clsx";
 import React from "react";
 
 type Props = {
+    className?: string;
     children?: React.ReactNode;
     color?:
-    | "blue"
+    "blue"
     | "gray"
     | "red"
     | "green"
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const Badge = ({
+    className,
     children,
     color = "blue",
     size = "xs",
@@ -34,7 +36,7 @@ const Badge = ({
     if (!link) {
         return (
             <span
-                className={clsx("font medium me-2 px-2.5 py-0.5 cursor-default", {
+                className={clsx(`font medium me-2 px-2.5 py-0.5 cursor-default ${className ? className : ""}`, {
                     "bg-blue-100 text-blue-800 border-blue-600": color === "blue",
                     "bg-gray-100 text-gray-800 border-gray-600": color === "gray",
                     "bg-red-100 text-red-800 border-red-600": color === "red",

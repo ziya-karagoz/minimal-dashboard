@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import fileBrowserSlice from "./file-browser/fileBrowserSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    fileBrowser: fileBrowserSlice.reducer,
+  },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

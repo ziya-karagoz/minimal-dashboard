@@ -13,7 +13,7 @@ import * as authHelper from "./AuthHelpers";
 import { fetchCurrentUser } from "./_requests";
 import { WithChildren } from "@base/helpers/components/WithChildren";
 import { swal } from "@base/components/common/alerts/SwalAlert";
-import { LayoutSplashScreen } from "@base/layout/BaseSplasyScreen";
+import { LayoutSplashScreen } from "@base/layout/contexts/BaseSplasyScreen";
 
 type AuthContextProps = {
   auth: string | undefined;
@@ -63,8 +63,8 @@ const AuthProvider: FC<WithChildren> = ({ children }) => {
           title: "Çıkış yapmak istediğinize emin misiniz?",
           icon: "warning",
           showCancelButton: true,
-          confirmButtonText: "Evet",
-          cancelButtonText: "Hayır",
+          confirmButtonText: "Evet, çıkış yap",
+          cancelButtonText: "Hayır, iptal et",
           reverseButtons: true,
         })
         .then((result) => {

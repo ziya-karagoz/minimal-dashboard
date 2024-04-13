@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import React, { useState } from 'react';
 
 type Props = {
+    tabClickCallback?: (tab: string) => void;
     tabs: {
         title: string;
         icon?: string;
@@ -9,7 +10,7 @@ type Props = {
     }[];
 };
 
-const VerticalTab = ({ tabs }: Props) => {
+const VerticalTab = ({ tabs, tabClickCallback }: Props) => {
     const [activeTab, setActiveTab] = useState(tabs[0].title);
 
     return (
@@ -18,7 +19,12 @@ const VerticalTab = ({ tabs }: Props) => {
                 {tabs.map((tab) => (
                     <li key={tab.title}>
                         <span
-                            onClick={() => setActiveTab(tab.title)}
+                            onClick={() => {
+                                setActiveTab(tab.title);
+                                if (tabClickCallback) {
+                                    tabClickCallback(tab.title);
+                                }
+                            }}
                             className={`cursor-pointer inline-flex items-center px-4 py-3 rounded-lg w-full ${activeTab === tab.title
                                 ? 'text-gray-900 bg-gray-200'
                                 : 'hover:text-gray-900 bg-gray-50 hover:bg-gray-100'

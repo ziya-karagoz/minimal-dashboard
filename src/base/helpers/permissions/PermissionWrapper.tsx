@@ -1,6 +1,6 @@
 import { jwtDecode } from "jwt-decode";
 import { Navigate } from "react-router";
-import { ERole, ERolePath } from "../../enums/role.enum";
+import { ERole } from "../../enums/role.enum";
 import { Route, Routes } from "react-router-dom";
 import { getRoleForCurrentPath } from "./permission.helper";
 import { useCurrentPath } from "@base/hooks/route/useCurrentPath";
@@ -48,5 +48,5 @@ export default function PermissionWrapper({ children }: Props) {
         return children;
     }
 
-    return <div>Yetkiniz yok</div>;
+    return <div>Permission Denied</div>;
 }

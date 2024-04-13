@@ -3,6 +3,7 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 
 type AccordionProps = {
     defaultActiveKey?: string | string[];
+    multiExpandable?: boolean;
     alwaysOpen?: boolean;
     style: "default" | "flush";
     children: React.ReactNode;
@@ -29,13 +30,13 @@ const Accordion: React.FC<AccordionProps> & {
     Item: React.FC<AccordionItemProps>;
     Header: React.FC<AccordionHeaderProps>;
     Body: React.FC<AccordionBodyProps>;
-} = ({ defaultActiveKey, alwaysOpen = false, style, children }) => {
-    const initialActiveKeys = Array.isArray(defaultActiveKey) ? defaultActiveKey : [defaultActiveKey || ''];
+} = ({ defaultActiveKey, multiExpandable = false, alwaysOpen = false, style, children }) => {
+    const initialActiveKeys = alwaysOpen ? React.Children.map(children, (child: any) => child.props.eventKey) : Array.isArray(defaultActiveKey) ? defaultActiveKey : [defaultActiveKey || ''];
     const [activeKeys, setActiveKeys] = useState(initialActiveKeys);
     const setActiveKey = (key: string) => {
-        if (alwaysOpen) {
+        if (alwaysOpen || multiExpandable) {
             if (activeKeys.includes(key)) {
-                setActiveKeys(activeKeys.filter(k => k !== key));
+                setActiveKeys(activeKeys.filter((k: any) => k !== key));
             } else {
                 setActiveKeys([...activeKeys, key]);
             }

@@ -1,12 +1,13 @@
 import React, { createContext, useContext, useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import clsx from "clsx";
+import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 type CardProps = {
     exClass?: string;
     shadow?: "sm" | "md" | "lg" | "xl" | "2xl" | "none";
     dismissible?: boolean;
-    collapsible?: boolean; // New prop for collapsibility
+    collapsible?: boolean;
     onDismiss?: () => void;
     children: React.ReactNode;
 };
@@ -21,15 +22,16 @@ type CardBodyProps = {
 };
 
 type CardFooterProps = {
+    floating?: boolean; // Yeni özellik
     children: React.ReactNode;
 };
 
 const CardContext = createContext<{
     dismissible?: boolean;
-    collapsible?: boolean; // New context value for collapsibility
-    collapsed?: boolean; // New context value for collapsed state
+    collapsible?: boolean;
+    collapsed?: boolean;
     onDismiss?: () => void;
-    toggleCollapse?: () => void; // New method to toggle collapse
+    toggleCollapse?: () => void;
 }>({});
 
 const CardHeader: React.FC<CardHeaderProps> = ({ children, dismissIcon }) => {
@@ -38,7 +40,7 @@ const CardHeader: React.FC<CardHeaderProps> = ({ children, dismissIcon }) => {
     return (
         <div className={clsx("p-4 border-gray-200", { "border-b": !collapsed })}>
             <div className="flex justify-between items-center">
-                <div>{children}</div>
+                <div className="w-full">{children}</div>
                 <div className="flex items-center">
                     {collapsible && (
                         <span
@@ -76,11 +78,27 @@ const CardBody: React.FC<CardBodyProps> = ({ children }) => {
     return <div className="p-4">{children}</div>;
 };
 
-const CardFooter: React.FC<CardFooterProps> = ({ children }) => {
+const CardFooter: React.FC<CardFooterProps> = ({ children, floating }) => {
+    const [ref, entry] = useIntersectionObserver({
+        threshold: 1,
+        root: null,
+        rootMargin: "0px",
+    });
+
+    // Footer görüş alanında değilse ve floating true ise, aşağıda mutlak konumda bir footer göster
+    const showFloatingFooter = floating && !entry?.isIntersecting;
+
     return (
-        <div className={clsx("p-4", { "border-t border-gray-200": children })}>
-            {children}
-        </div>
+        <>
+            <div ref={ref} className={clsx("p-4", { "border-t border-gray-200": children })}>
+                {children}
+            </div>
+            {showFloatingFooter && (
+                <div className="fixed bottom-0 left-0 right-0  p-4 bg-white shadow">
+                    {children}
+                </div>
+            )}
+        </>
     );
 };
 
@@ -90,7 +108,7 @@ const Card: React.FC<CardProps> & {
     Footer: React.FC<CardFooterProps>;
 } = ({ exClass = "", children, shadow = "md", dismissible, collapsible, onDismiss }) => {
     const [visible, setVisible] = useState(true);
-    const [collapsed, setCollapsed] = useState(false); // New state for collapsed
+    const [collapsed, setCollapsed] = useState(false);
 
     const handleDismiss = () => {
         setVisible(false);

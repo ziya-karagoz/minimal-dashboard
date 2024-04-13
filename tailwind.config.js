@@ -5,6 +5,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      flex: {
+        '2': '2 2 0%'
+      },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
+      fontSize: {
+        xxs: '.5rem',
+      },
       colors: {
         white: "#FFFFFF",
         black: "#000000",
@@ -57,16 +67,16 @@ module.exports = {
           900: "#064E3B",
         },
         red: {
-          50: "#FFF0EB",
-          100: "#FFD6CC",
-          200: "#FFB4A1",
-          300: "#FD8C73",
-          400: "#EC6547",
-          500: "#C4432B",
-          600: "#9E2F1C",
-          700: "#801F0F",
-          800: "#691105",
-          900: "#510901",
+          50: "#fde9e7",
+          100: "#fad3cf",
+          200: "#f5a69f",
+          300: "#f07a6f",
+          400: "#eb4d3f",
+          500: "#e6210f",
+          600: "#b81a0c",
+          700: "#a1170b",
+          800: "#8a1409",
+          900: "#5c0d06",
         },
       },
     }

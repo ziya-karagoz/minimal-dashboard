@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 
 type AvatarProps = {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | "2xl";
     shape?: 'rounded' | 'circle';
     src?: string;
     initial?: string;
@@ -37,6 +37,7 @@ const Avatar: React.FC<AvatarProps> = ({
         md: 'w-10 h-10',
         lg: 'w-20 h-20',
         xl: 'w-36 h-36',
+        '2xl': 'w-48 h-48',
     };
 
     const shapeClasses = {
