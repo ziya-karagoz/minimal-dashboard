@@ -1,28 +1,10 @@
 import clsx from "clsx";
 import React from "react";
+import { ButtonGroupProps } from "./ButtonGroup.types";
 
-type Props = {
-    color?:
-    | "blue"
-    | "gray"
-    | "red"
-    | "green"
-    | "yellow"
-    | "indigo"
-    | "purple"
-    | "pink"
-    | "orange";
-    buttons: {
-        content: string;
-        icon?: React.ReactNode;
-        to?: string;
-        active?: boolean;
-        onClick?: React.MouseEventHandler<HTMLButtonElement>;
-    }[];
-    outlined?: boolean;
-};
 
-const ButtonGroup: React.FC<Props> = ({
+
+const ButtonGroup: React.FC<ButtonGroupProps> = ({
     color = "blue",
     buttons,
     outlined = false,

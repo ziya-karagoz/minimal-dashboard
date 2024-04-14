@@ -2,10 +2,18 @@ import { Meta, StoryFn } from '@storybook/react';
 import { Icon } from "@iconify/react";
 import BottomNavigation from './BottomNavigation';
 import { BottomNavigationProps } from './BottomNavigation.types';
+import { MemoryRouter } from 'react-router';
 
 export default {
   title: 'Components/BottomNavigation',
   component: BottomNavigation,
+  decorators: [
+    (Story) => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
   argTypes: {
     color: {
       control: 'select',
