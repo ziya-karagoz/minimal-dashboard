@@ -1,16 +1,10 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import React, { useState } from 'react';
+import { VerticalTabProps } from './Tabs.types';
 
-type Props = {
-    tabClickCallback?: (tab: string) => void;
-    tabs: {
-        title: string;
-        icon?: string;
-        content: React.ReactNode;
-    }[];
-};
 
-const VerticalTab = ({ tabs, tabClickCallback }: Props) => {
+
+const VerticalTab = ({ tabs, tabClickCallback }: VerticalTabProps) => {
     const [activeTab, setActiveTab] = useState(tabs[0].title);
 
     return (

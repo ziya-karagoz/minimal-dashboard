@@ -1,3 +1,4 @@
+import { TextSkeletonProps } from "./Skeleton.types";
 
 const Skeleton = () => {
   return (
@@ -37,10 +38,7 @@ const Skeleton = () => {
   )
 }
 
-type TextSkeletonProps = {
-  line?: number
-  bar?: number
-}
+
 
 
 const TextSkeleton: React.FC<TextSkeletonProps> = ({ line = 3, bar = 4 }) => {

@@ -8,13 +8,7 @@ export default {
   title: 'Components/Breadcrumb',
   component: Breadcrumb,
   tags: ['autodocs'],
-  decorators: [
-    (Story) => (
-      <BrowserRouter>
-        <Story />
-      </BrowserRouter>
-    ),
-  ],
+
   argTypes: {
     color: {
       control: 'select',

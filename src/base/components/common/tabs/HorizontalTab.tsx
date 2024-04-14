@@ -1,19 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Icon } from "@iconify/react/dist/iconify.js";
 import clsx from "clsx";
-import React, { useState } from "react";
+import { useState } from "react";
+import { HorizontalTabProps } from "./Tabs.types";
 
-type Props = {
-  tabs: {
-    title: string;
-    icon?: string;
-    content?: React.ReactNode;
-  }[];
-  decoration?: "classic" | "underline" | "filled" | "rounded" | "shadow" | "minimal" | "none";
-  onTabChange?: (tab: any) => void;
-};
 
-const HorizontalTab = ({ tabs, decoration = "rounded", onTabChange }: Props) => {
+
+const HorizontalTab = ({ tabs, decoration = "rounded", onTabChange }: HorizontalTabProps) => {
   const [activeTab, setActiveTab] = useState(tabs[0].title);
 
   const getTabClassNames = (isActive: boolean) => {

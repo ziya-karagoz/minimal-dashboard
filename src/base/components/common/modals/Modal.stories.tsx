@@ -8,6 +8,13 @@ export default {
   title: "Components/Modal",
   component: Modal,
   tags: ["autodocs"],
+  decorators: [
+    (Story) => (
+        <div className="h-[50vh]">
+            <Story />
+        </div>
+    ),
+],
   argTypes: {
     size: {
       control: "select",
@@ -40,13 +47,6 @@ export default {
       description: "Determines the behavior of the backdrop.",
     },
   },
-  decorators: [
-    (Story) => (
-      <div style={{ height: "100vh" }}>
-        <Story />
-      </div>
-    ),
-  ],
 } as Meta;
 
 const Template: StoryFn<ModalProps> = (args) => {

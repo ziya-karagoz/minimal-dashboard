@@ -29,13 +29,6 @@ export default {
       description: 'Specifies the dimensions of the map.',
     },
   },
-  decorators: [
-    (Story) => (
-      <div style={{ height: '500px', width: '100%' }}>
-        <Story />
-      </div>
-    )
-  ],
 } as Meta;
 
 const Template: StoryFn<SimpleMapProps> = (args) => <SimpleMap {...args} />;

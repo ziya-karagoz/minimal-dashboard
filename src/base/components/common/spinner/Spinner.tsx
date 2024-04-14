@@ -1,22 +1,10 @@
 import clsx from "clsx";
 import React from "react";
+import { SpinnerProps } from "./Spinner.types";
 
-type Props = {
-    exClass?: string;
-    color?:
-    | "blue"
-    | "gray"
-    | "red"
-    | "green"
-    | "yellow"
-    | "indigo"
-    | "purple"
-    | "pink"
-    | "orange";
-    size: "xs" | "sm" | "md" | "lg" | "xl";
-};
 
-const Spinner: React.FC<Props> = ({ exClass, color = "gray", size = "md" }) => {
+
+const Spinner: React.FC<SpinnerProps> = ({ exClass, color = "gray", size = "md" }) => {
     return (
         <div role="status" className={clsx("flex justify-center items-center", exClass)}>
             <svg

@@ -1,24 +1,12 @@
-import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import QuillEditor from './QuillEditor';
 import { QuillEditorProps } from './QuillEditor.types';
-import { Provider } from 'react-redux';
-import { store } from '@app/store';
-import { BrowserRouter } from 'react-router-dom';
+
 
 export default {
   title: 'Components/QuillEditor',
   tags: ['autodocs'],
   component: QuillEditor,
-  decorators: [
-    (Story) => (
-        <Provider store={store}>
-            <BrowserRouter>
-                <Story />
-            </BrowserRouter>
-        </Provider>
-    ),
-    ],
   argTypes: {
     editorHtml: {
       control: 'text',
