@@ -6,6 +6,7 @@ import { AccordionProps } from './Accordion.types';
 export default {
   title: 'Components/Accordion',
   component: Accordion,
+  tags: ['autodocs'],
   argTypes: {
     style: {
       control: 'select',

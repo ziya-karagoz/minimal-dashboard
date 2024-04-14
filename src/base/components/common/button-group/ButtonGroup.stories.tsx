@@ -6,6 +6,7 @@ import { ButtonGroupProps } from './ButtonGroup.types';
 export default {
   title: 'Components/ButtonGroup',
   component: ButtonGroup,
+  tags: ['autodocs'],
   argTypes: {
     color: {
       control: 'select',

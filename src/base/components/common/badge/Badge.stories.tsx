@@ -7,6 +7,7 @@ import { BadgeProps } from './Badge.types';
 export default {
   title: 'Components/Badge',
   component: Badge,
+  tags: ['autodocs'],
   argTypes: {
     color: {
       control: 'select',

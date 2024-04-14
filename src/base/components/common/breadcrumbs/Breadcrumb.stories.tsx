@@ -1,6 +1,5 @@
-import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import { NavLink, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Icon } from "@iconify/react";
 import Breadcrumb from './Breadcrumb';
 import { BreadcrumbProps } from './Breadcrumb.types';
@@ -8,6 +7,7 @@ import { BreadcrumbProps } from './Breadcrumb.types';
 export default {
   title: 'Components/Breadcrumb',
   component: Breadcrumb,
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <BrowserRouter>
@@ -55,7 +55,7 @@ DisabledLink.args = {
     { name: 'About', link: '/about', disabled: true },
     { name: 'Contact', link: '/contact' }
   ],
-  color: 'gray'
+  color: 'red'
 };
 
 export const Colored = Template.bind({});
@@ -66,6 +66,6 @@ Colored.args = {
     { name: 'Services', link: '/services' },
     { name: 'Contact', link: '/contact' }
   ],
-  color: 'red'
+  color: 'purple'
 };
 

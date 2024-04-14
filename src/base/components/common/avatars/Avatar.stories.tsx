@@ -5,6 +5,7 @@ import { AvatarProps } from './Avatar.types';
 export default {
   title: 'Components/Avatar',
   component: Avatar,
+  tags: ['autodocs'],
   argTypes: {
     size: {
       control: 'select',

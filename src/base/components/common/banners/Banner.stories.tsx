@@ -7,6 +7,7 @@ import { BannerProps } from './Banner.types';
 export default {
   title: 'Components/Banner',
   component: Banner,
+  tags: ['autodocs'],
   argTypes: {
     color: {
       control: 'select',

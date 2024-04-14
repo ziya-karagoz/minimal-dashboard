@@ -7,6 +7,7 @@ import { MemoryRouter } from 'react-router';
 export default {
   title: 'Components/BottomNavigation',
   component: BottomNavigation,
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <MemoryRouter>
