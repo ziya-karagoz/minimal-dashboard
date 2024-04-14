@@ -9,7 +9,7 @@ const Indicator = ({ color = "blue", children }: IndicatorProps) => {
             <span className={clsx("flex w-2.5 h-2.5 rounded-full me-1.5 flex-shrink-0", {
                 "text-blue-800 bg-blue-500": color === "blue",
                 "text-gray-800 bg-gray-500": color === "gray",
-                "text-red-800 bg-red-500": color === "red",
+                "text-primary-800 bg-primary-500": color === "red",
                 "text-green-800 bg-green-500": color === "green",
                 "text-yellow-800 bg-yellow-500": color === "yellow",
                 "text-indigo-800 bg-indigo-500": color === "indigo",

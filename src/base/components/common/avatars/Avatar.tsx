@@ -33,7 +33,7 @@ const Avatar: React.FC<AvatarProps> = ({
           ? clsx({
               "ring-blue-300": indicator.color === "blue",
               "ring-gray-300": indicator.color === "gray",
-              "ring-red-300": indicator.color === "red",
+              "ring-primary-300": indicator.color === "red",
               "ring-green-300": indicator.color === "green",
               "ring-yellow-300": indicator.color === "yellow",
               "ring-indigo-300": indicator.color === "indigo",

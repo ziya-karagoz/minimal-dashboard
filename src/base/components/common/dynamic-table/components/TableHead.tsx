@@ -68,7 +68,7 @@ export default function TableHead<T>({
                     filterField?.selecteds?.length === 0 &&
                     filterField.min === null &&
                     filterField.max === null,
-                  "text-red-500":
+                  "text-primary-500":
                     (filterField?.selecteds?.length &&
                       filterField?.selecteds?.length > 0) ||
                     filterField.min !== null ||

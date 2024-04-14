@@ -143,7 +143,7 @@ function DynamicTable<T>({
                     value={search ?? ""}
                     type="search"
                     id="default-search"
-                    className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-md bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500 focus:outline-none"
+                    className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-md bg-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:outline-none"
                   />
                 </div>
               </div>

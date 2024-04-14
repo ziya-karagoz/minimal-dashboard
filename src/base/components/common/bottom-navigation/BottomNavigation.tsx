@@ -21,7 +21,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ items, color = "blu
                                 <div className={clsx("", {
                                     "text-blue-500": color === "blue",
                                     "text-gray-500": color === "gray",
-                                    "text-red-500": color === "red",
+                                    "text-primary-500": color === "red",
                                     "text-green-500": color === "green",
                                     "text-yellow-500": color === "yellow",
                                     "text-indigo-500": color === "indigo",
@@ -35,7 +35,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ items, color = "blu
                                 <div className={clsx("text-xs", {
                                     "text-blue-500": color === "blue",
                                     "text-gray-500": color === "gray",
-                                    "text-red-500": color === "red",
+                                    "text-primary-500": color === "red",
                                     "text-green-500": color === "green",
                                     "text-yellow-500": color === "yellow",
                                     "text-indigo-500": color === "indigo",
@@ -79,7 +79,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ items, color = "blu
                                 <div className={clsx("", {
                                     "text-blue-500": color === "blue",
                                     "text-gray-500": color === "gray",
-                                    "text-red-500": color === "red",
+                                    "text-primary-500": color === "red",
                                     "text-green-500": color === "green",
                                     "text-yellow-500": color === "yellow",
                                     "text-indigo-500": color === "indigo",
@@ -93,7 +93,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ items, color = "blu
                                 <div className={clsx("text-xs", {
                                     "text-blue-500": color === "blue",
                                     "text-gray-500": color === "gray",
-                                    "text-red-500": color === "red",
+                                    "text-primary-500": color === "red",
                                     "text-green-500": color === "green",
                                     "text-yellow-500": color === "yellow",
                                     "text-indigo-500": color === "indigo",

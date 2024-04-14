@@ -100,7 +100,7 @@ const Header = () => {
                         </button>
                         {/* Go Back Button Start */}
                         <div
-                            className="items-center gap-x-2 flex bg-gray-50 hover:bg-gray-100 p-2.5 rounded-lg cursor-pointer text-red-500"
+                            className="items-center gap-x-2 flex bg-gray-50 hover:bg-gray-100 p-2.5 rounded-lg cursor-pointer text-primary-500"
                             onClick={() => navigate(-1)}
                         >
                             <Icon icon="lets-icons:refund-back" />

@@ -102,7 +102,7 @@ const Notifications = () => {
                                     src="https://robohash.org/stefan-two"
                                     alt="Bonnie image"
                                 />
-                                <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-red-600 border border-white rounded-full ">
+                                <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-primary-600 border border-white rounded-full ">
                                     <svg
                                         className="w-2 h-2 text-white"
                                         aria-hidden="true"

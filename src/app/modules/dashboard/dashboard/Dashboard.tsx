@@ -9,11 +9,6 @@ const Dashboard = () => {
         <DashboardCard />
         <DashboardCard />
       </div>
-      <div className="flex justify-center mt-6">
-        <a href="/anasayfa/components" className="bg-gray-100 p-2 mb-12">
-          View Components
-        </a>
-      </div>
     </React.Fragment>
   );
 };

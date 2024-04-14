@@ -21,7 +21,7 @@ const Alert = ({ children, color = "blue", bordered = false, icon = undefined, d
                 className={clsx("p-4 mb-4 text-sm rounded-lg", {
                     "text-blue-800 bg-blue-50 border-blue-300 ": color === "blue",
                     "text-gray-800 bg-gray-50 border-gray-300 ": color === "gray",
-                    "text-red-800 bg-red-50 border-red-300 ": color === "red",
+                    "text-primary-800 bg-primary-50 border-primary-300 ": color === "red",
                     "text-green-800 bg-green-50 border-green-300 ": color === "green",
                     "text-yellow-800 bg-yellow-50 border-yellow-300 ": color === "yellow",
                     "text-indigo-800 bg-indigo-50 border-indigo-300 ": color === "indigo",

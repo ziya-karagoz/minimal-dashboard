@@ -13,7 +13,7 @@ const ClearFilterButton = () => {
       <Tooltip id="tooltip-update-v" place="top" content="Filtreleri Temizle" />
       <span
         data-tooltip-id="tooltip-update-v"
-        className="bg-gray-100 p-2 text-red-500 rounded-md cursor-pointer"
+        className="bg-gray-100 p-2 text-primary-500 rounded-md cursor-pointer"
         onClick={handleFilterClear}
       >
         <Icon icon="tabler:filter-x" />

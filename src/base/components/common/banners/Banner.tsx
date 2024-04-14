@@ -29,7 +29,7 @@ const Banner: React.FC<BannerProps> = ({
                 {
                     "border-blue-200 bg-blue-50": color === "blue",
                     "border-gray-200 bg-gray-50": color === "gray",
-                    "border-red-200 bg-red-50": color === "red",
+                    "border-primary-200 bg-primary-50": color === "red",
                     "border-green-200 bg-green-50": color === "green",
                     "border-yellow-200 bg-yellow-50": color === "yellow",
                     "border-indigo-200 bg-indigo-50": color === "indigo",
@@ -44,7 +44,7 @@ const Banner: React.FC<BannerProps> = ({
                     className={clsx("flex items-center text-sm font-normal", {
                         "text-blue-500": color === "blue",
                         "text-gray-500": color === "gray",
-                        "text-red-500": color === "red",
+                        "text-primary-500": color === "red",
                         "text-green-500": color === "green",
                         "text-yellow-500": color === "yellow",
                         "text-indigo-500": color === "indigo",
@@ -60,7 +60,7 @@ const Banner: React.FC<BannerProps> = ({
                                 {
                                     "bg-blue-200": color === "blue",
                                     "bg-gray-200": color === "gray",
-                                    "bg-red-200": color === "red",
+                                    "bg-primary-200": color === "red",
                                     "bg-green-200": color === "green",
                                     "bg-yellow-200": color === "yellow",
                                     "bg-indigo-200": color === "indigo",
@@ -88,7 +88,7 @@ const Banner: React.FC<BannerProps> = ({
                                     color === "blue",
                                 "text-gray-400 hover:bg-gray-200 hover:text-gray-900":
                                     color === "gray",
-                                "text-red-400 hover:bg-red-200 hover:text-red-900":
+                                "text-primary-400 hover:bg-primary-200 hover:text-primary-900":
                                     color === "red",
                                 "text-green-400 hover:bg-green-200 hover:text-green-900":
                                     color === "green",

@@ -51,7 +51,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
                                         "gap-1 ms-1 md:ms-2": style === "solid",
                                         "text-blue-500 hover:text-blue-600": color === "blue",
                                         "text-gray-500 hover:text-gray-600": color === "gray",
-                                        "text-red-500 hover:text-red-600": color === "red",
+                                        "text-primary-500 hover:text-primary-600": color === "red",
                                         "text-green-500 hover:text-green-600": color === "green",
                                         "text-yellow-500 hover:text-yellow-600": color === "yellow",
                                         "text-indigo-500 hover:text-indigo-600": color === "indigo",

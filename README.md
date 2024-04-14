@@ -22,7 +22,6 @@ Below is the main structure of the project, providing a clear view of all compon
     ├── 📁.storybook
     ├── 📁public
     │ ├── 📁assets
-    │ ├── logo.webp
     │ └── 📁media
     ├── README.md
     ├── 📁src

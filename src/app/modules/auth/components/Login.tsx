@@ -55,7 +55,7 @@ const Login = () => {
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <a
             href="#"
-            className="flex items-center mb-6 text-2xl font-semibold text-red-900"
+            className="flex items-center mb-6 text-2xl font-semibold text-primary-900"
           >
             <svg
               className="w-8 h-8 mr-2"
@@ -114,7 +114,7 @@ const Login = () => {
                     placeholder="name@company.com"
                   />
                   {formik.touched.email && formik.errors.email ? (
-                    <p className="mt-2 text-sm text-red-600">
+                    <p className="mt-2 text-sm text-primary-600">
                       {formik.errors.email}
                     </p>
                   ) : null}
@@ -136,7 +136,7 @@ const Login = () => {
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-gray-600 focus:border-gray-600 block w-full p-2.5 "
                   />
                   {formik.touched.password && formik.errors.password ? (
-                    <p className="mt-2 text-sm text-red-600">
+                    <p className="mt-2 text-sm text-primary-600">
                       {formik.errors.password}
                     </p>
                   ) : null}
@@ -151,7 +151,7 @@ const Login = () => {
                         name="rememberMe"
                         checked={formik.values.rememberMe}
                         onChange={formik.handleChange}
-                        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-red-300 accent-red-500"
+                        className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 accent-primary-500"
                       />
                     </div>
                     <div className="ml-3 text-sm">
@@ -169,7 +169,7 @@ const Login = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none disabled:bg-red-400 focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                  className="w-full text-white bg-primary-500 hover:bg-primary-600 focus:ring-4 focus:outline-none disabled:bg-primary-400 focus:ring-primary-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                   disabled={!formik.isValid}
                 >
                   Giriş Yap

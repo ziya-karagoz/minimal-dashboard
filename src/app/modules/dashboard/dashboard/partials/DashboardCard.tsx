@@ -40,7 +40,7 @@ const DashboardCard: React.FC = () => {
                     <div className="w-full bg-teal-500 rounded-xl min-h-[4px]" />
                 </div>
                 <h2 className="self-center mt-7 text-xs font-semibold tracking-wide leading-4 text-center uppercase text-slate-500">
-                    Hizmet Talepleri
+                    Toplam İşler
                 </h2>
                 <div className="self-center mt-6 text-5xl font-semibold text-center leading-[68.6px] text-neutral-800">
                     <CountUp end={1000} duration={

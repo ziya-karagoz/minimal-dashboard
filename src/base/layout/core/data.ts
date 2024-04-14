@@ -11,24 +11,19 @@ export const Menus = [
     section: "Ayarlar",
   },
   {
-    title: "Ayarlar",
+    title: "Hesaplar",
     roles: `${ERole.Public},${ERole.Public},${ERole.Public},${ERole.Public},${ERole.Public}`,
-    icon: "majesticons:settings-cog-line",
+    icon: "mdi:account-box-outline",
     children: [
       {
-        to: "/ayarlar/sistem",
+        to: "/hesaplar/liste",
         roles: ERole.Public,
-        title: "Sistem Ayarları",
+        title: "Hesaplar",
       },
       {
-        to: "/ayarlar/e-ticaret",
+        to: "/hesaplar/test",
         roles: ERole.Public,
-        title: "E-ticaret Ayarları",
-      },
-      {
-        to: "/ayarlar/kullanici",
-        roles: ERole.Public,
-        title: "Kullanıcı Arayüz Ayarları",
+        title: "Test",
       },
     ],
   },

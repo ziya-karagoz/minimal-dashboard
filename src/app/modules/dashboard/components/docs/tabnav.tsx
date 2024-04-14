@@ -10,7 +10,7 @@ const examnpleTabs = [
         title: "Example 2",
         icon: "ic:round-dashboard",
         content: (
-            <div className="text-red-500">
+            <div className="text-primary-500">
                 This is the content for the Example 2 tab.
             </div>
         ),

@@ -16,7 +16,7 @@ const Spinner: React.FC<SpinnerProps> = ({ exClass, color = "gray", size = "md" 
                     "w-16 h-16": size === "xl",
                     "fill-blue-600": color === "blue",
                     "fill-gray-900": color === "gray",
-                    "fill-red-600": color === "red",
+                    "fill-primary-600": color === "red",
                     "fill-green-600": color === "green",
                     "fill-yellow-600": color === "yellow",
                     "fill-indigo-600": color === "indigo",

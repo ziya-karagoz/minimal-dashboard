@@ -1,11 +1,11 @@
-import { Navigate, Route, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import AccountList from "./account-list/AccountList";
 
 const AccountsPage = () => {
     return (
         <Routes>
             <Route
-                path="list"
+                path="liste"
                 element={
                     <>
                         <AccountList />

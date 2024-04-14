@@ -36,14 +36,14 @@ const Progress: React.FC<ProgressProps> = ({
                         "h-6 text-sm": size === "lg",
                         "bg-blue-600": !progressiveColors && color === "blue",
                         "bg-gray-600": !progressiveColors && color === "gray",
-                        "bg-red-600": !progressiveColors && color === "red",
+                        "bg-primary-600": !progressiveColors && color === "red",
                         "bg-green-600": !progressiveColors && color === "green",
                         "bg-yellow-600": !progressiveColors && color === "yellow",
                         "bg-indigo-600": !progressiveColors && color === "indigo",
                         "bg-purple-600": !progressiveColors && color === "purple",
                         "bg-pink-600": !progressiveColors && color === "pink",
                         "bg-orange-600": !progressiveColors && color === "orange",
-                        "bg-gradient-to-r from-red-400 to-red-600":
+                        "bg-gradient-to-r from-primary-400 to-primary-600":
                             progressiveColors && value <= 30,
                         "bg-gradient-to-r from-yellow-400 to-yellow-600":
                             progressiveColors && value > 30 && value <= 70,

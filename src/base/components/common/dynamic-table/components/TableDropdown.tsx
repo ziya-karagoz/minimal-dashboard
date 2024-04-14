@@ -212,7 +212,7 @@ function DynamicTableDropdown<T>({
               filterField.selecteds.length === 0 &&
               filterField.min === null &&
               filterField.max === null,
-            "text-red-500":
+            "text-primary-500":
               filterField.selecteds.length > 0 ||
               filterField.min !== null ||
               filterField.max !== null,
@@ -241,7 +241,7 @@ function DynamicTableDropdown<T>({
                   </div>
                   <input
                     type="text"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full ps-10 p-2.5"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full ps-10 p-2.5"
                     id={`search-${String(headCell.id)}`}
                     name={`search-${String(headCell.id)}`}
                     placeholder={headCell.label}
@@ -272,7 +272,7 @@ function DynamicTableDropdown<T>({
                     }}
 
                     type="checkbox"
-                    className="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500 accent-red-500"
+                    className="w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 accent-primary-500"
                   />
                   <label
 
@@ -305,7 +305,7 @@ function DynamicTableDropdown<T>({
                       <div className="flex items-center mb-4" key={index}>
                         <input
                           type="checkbox"
-                          className="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500 accent-red-500"
+                          className="w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 accent-primary-500"
                           id={String(item?.key)}
                           name={String(item?.key)}
                           value={item?.key}
@@ -329,7 +329,7 @@ function DynamicTableDropdown<T>({
                   <div className="flex items-center mb-4" key={index}>
                     <input
                       type="checkbox"
-                      className="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 rounded focus:ring-red-500 accent-red-500"
+                      className="w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 accent-primary-500"
                       id={item?.name}
                       name={item?.name}
                       value={item?.value}
@@ -366,7 +366,7 @@ function DynamicTableDropdown<T>({
                   })
                 }
                 type="number"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
 
               />
             </div>
@@ -386,7 +386,7 @@ function DynamicTableDropdown<T>({
                   })
                 }
                 type="number"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
 
               />
             </div>
@@ -407,7 +407,7 @@ function DynamicTableDropdown<T>({
                   setFilterField({ ...filterField, min: e.target.value })
                 }
                 type="date"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
               />
             </div>
             <div className="max-w-sm">
@@ -423,7 +423,7 @@ function DynamicTableDropdown<T>({
                   setFilterField({ ...filterField, max: e.target.value })
                 }
                 type="date"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
               />
             </div>
           </div>

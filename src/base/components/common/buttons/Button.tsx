@@ -38,7 +38,7 @@ const Button: React.FC<ButtonProps> = ({
                         color === "blue" && !gradient && !outlined,
                     "bg-gray-500 hover:bg-gray-600 focus:ring-gray-300":
                         color === "gray" && !gradient && !outlined,
-                    "bg-red-500 hover:bg-red-600 focus:ring-red-300":
+                    "bg-primary-500 hover:bg-primary-600 focus:ring-primary-300":
                         color === "red" && !gradient && !outlined,
                     "bg-green-500 hover:bg-green-600 focus:ring-green-300":
                         color === "green" && !gradient && !outlined,
@@ -56,7 +56,7 @@ const Button: React.FC<ButtonProps> = ({
                         color === "blue" && !gradient && outlined && color === "blue",
                     "bg-white border-2 text-gray-800 hover:text-white border-gray-500 hover:bg-gray-500 focus:ring-gray-300 ":
                         color === "gray" && !gradient && outlined && color === "gray",
-                    "bg-white border-2 text-red-800 hover:text-white border-red-500 hover:bg-red-500 focus:ring-red-300 ":
+                    "bg-white border-2 text-primary-800 hover:text-white border-primary-500 hover:bg-primary-500 focus:ring-primary-300 ":
                         color === "red" && !gradient && outlined && color === "red",
                     "bg-white border-2 text-green-800 hover:text-white border-green-500 hover:bg-green-500 focus:ring-green-300 ":
                         color === "green" && !gradient && outlined && color === "green",
@@ -74,7 +74,7 @@ const Button: React.FC<ButtonProps> = ({
                         gradient && !outlined && color === "blue",
                     "bg-gradient-to-r from-gray-400 to-gray-700 hover:from-gray-600 hover:to-gray-800 focus:ring-gray-300":
                         gradient && !outlined && color === "gray",
-                    "bg-gradient-to-r from-red-400 to-red-700 hover:from-red-600 hover:to-red-800 focus:ring-red-300":
+                    "bg-gradient-to-r from-primary-400 to-primary-700 hover:from-primary-600 hover:to-primary-800 focus:ring-primary-300":
                         gradient && !outlined && color === "red",
                     "bg-gradient-to-r from-green-400 to-green-700 hover:from-green-600 hover:to-green-800 focus:ring-green-300":
                         gradient && !outlined && color === "green",
@@ -94,7 +94,7 @@ const Button: React.FC<ButtonProps> = ({
                         gradient && outlined && color === "blue",
                     "  from-gray-400 to-gray-600 group-hover:from-gray-600 group-hover:to-gray-400  focus:ring-gray-300":
                         gradient && outlined && color === "gray",
-                    "  from-red-400 to-red-600 group-hover:from-red-600 group-hover:to-red-400  focus:ring-red-300":
+                    "  from-primary-400 to-primary-600 group-hover:from-primary-600 group-hover:to-primary-400  focus:ring-primary-300":
                         gradient && outlined && color === "red",
                     "  from-green-400 to-green-600 group-hover:from-green-600 group-hover:to-green-400  focus:ring-green-300":
                         gradient && outlined && color === "green",
@@ -126,7 +126,7 @@ const Button: React.FC<ButtonProps> = ({
                             "px-6 py-3.5 text-base": size === "xl",
                             "text-blue-800": color === "blue",
                             "text-gray-800": color === "gray",
-                            "text-red-800": color === "red",
+                            "text-primary-800": color === "red",
                             "text-green-800": color === "green",
                             "text-yellow-800": color === "yellow",
                             "text-indigo-800": color === "indigo",

@@ -29,7 +29,7 @@ const CAccordion = () => {
                                         title: "Example 2",
                                         icon: "ic:round-dashboard",
                                         content: (
-                                            <div className="text-red-500">
+                                            <div className="text-primary-500">
                                                 We Can insert whatever we want here as you can see.
                                             </div>
                                         ),
@@ -63,7 +63,7 @@ const CAccordion = () => {
                                         title: "Example 2",
                                         icon: "ic:round-dashboard",
                                         content: (
-                                            <div className="text-red-500">
+                                            <div className="text-primary-500">
                                                 We Can insert whatever we want here as you can see.
                                             </div>
                                         ),

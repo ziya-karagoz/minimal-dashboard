@@ -22,7 +22,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
                                     color === "blue",
                                 "text-gray-700 border-gray-200 hover:text-gray-700 focus:ring-gray-700 focus:text-gray-700 hover:bg-gray-100":
                                     color === "gray",
-                                "text-red-700 border-red-200 hover:text-red-700 focus:ring-red-700 focus:text-red-700 hover:bg-red-100":
+                                "text-primary-700 border-primary-200 hover:text-primary-700 focus:ring-primary-700 focus:text-primary-700 hover:bg-primary-100":
                                     color === "red",
                                 "text-green-700  border-green-200 hover:text-green-700 focus:ring-green-700 focus:text-green-700 hover:bg-green-100":
                                     color === "green",
@@ -38,7 +38,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
                                     color === "orange",
                                 "bg-transparent border-blue-800": outlined && color === "blue",
                                 "bg-transparent border-gray-800": outlined && color === "gray",
-                                "bg-transparent border-red-800": outlined && color === "red",
+                                "bg-transparent border-primary-800": outlined && color === "red",
                                 "bg-transparent border-green-800":
                                     outlined && color === "green",
                                 "bg-transparent border-yellow-800":
@@ -71,7 +71,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
                                     color === "blue",
                                 "text-gray-700 border-gray-200 hover:text-gray-700 focus:ring-gray-700 focus:text-gray-700 hover:bg-gray-100":
                                     color === "gray",
-                                "text-red-700 border-red-200 hover:text-red-700 focus:ring-red-700 focus:text-red-700 hover:bg-red-100":
+                                "text-primary-700 border-primary-200 hover:text-primary-700 focus:ring-primary-700 focus:text-primary-700 hover:bg-primary-100":
                                     color === "red",
                                 "text-green-700 border-green-200 hover:text-green-700 focus:ring-green-700 focus:text-green-700 hover:bg-green-100":
                                     color === "green",
@@ -87,7 +87,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
                                     color === "orange",
                                 "bg-transparent border-blue-800": outlined && color === "blue",
                                 "bg-transparent border-gray-800": outlined && color === "gray",
-                                "bg-transparent border-red-800": outlined && color === "red",
+                                "bg-transparent border-primary-800": outlined && color === "red",
                                 "bg-transparent border-green-800":
                                     outlined && color === "green",
                                 "bg-transparent border-yellow-800":

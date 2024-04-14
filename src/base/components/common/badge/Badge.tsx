@@ -20,7 +20,7 @@ const Badge = ({
                 className={clsx(`font medium me-2 px-2.5 py-0.5 cursor-default ${className ? className : ""}`, {
                     "bg-blue-100 text-blue-800 border-blue-600": color === "blue",
                     "bg-gray-100 text-gray-800 border-gray-600": color === "gray",
-                    "bg-red-100 text-red-800 border-red-600": color === "red",
+                    "bg-primary-100 text-primary-800 border-primary-600": color === "red",
                     "bg-green-100 text-green-800 border-green-600": color === "green",
                     "bg-yellow-100 text-yellow-800 border-yellow-600": color === "yellow",
                     "bg-indigo-100 text-indigo-800 border-indigo-600": color === "indigo",
@@ -48,7 +48,7 @@ const Badge = ({
                 className={clsx("font medium me-2 px-2.5 py-0.5", {
                     "bg-blue-100 text-blue-800 border-blue-600": color === "blue",
                     "bg-gray-100 text-gray-800 border-gray-600": color === "gray",
-                    "bg-red-100 text-red-800 border-red-600": color === "red",
+                    "bg-primary-100 text-primary-800 border-primary-600": color === "red",
                     "bg-green-100 text-green-800 border-green-600": color === "green",
                     "bg-yellow-100 text-yellow-800 border-yellow-600": color === "yellow",
                     "bg-indigo-100 text-indigo-800 border-indigo-600": color === "indigo",

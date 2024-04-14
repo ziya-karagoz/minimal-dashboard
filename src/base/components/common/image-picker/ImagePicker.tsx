@@ -15,7 +15,7 @@ const ImagePicker = ({ value, onChange, exClass }: ImagePickerProps) => {
         {value && (
           <div className="flex py-1">
             <Avatar
-              className="shadow-lg shadow-red-100"
+              className="shadow-lg shadow-primary-100"
               src={value}
               alt="avatar"
               size="xl"

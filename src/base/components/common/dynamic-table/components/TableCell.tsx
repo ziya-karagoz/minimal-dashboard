@@ -85,7 +85,7 @@ export default function TableCell<T>({ tableHead, row }: TableCellProps<T>) {
                 <span
                   data-tooltip-id={"tooltip-" + index}
                   key={index}
-                  className="inline-flex text-sm items-center justify-center text-red-500 hover:text-white hover:bg-red-500 bg-neutral-100 p-3 rounded-md cursor-pointer m-1"
+                  className="inline-flex text-sm items-center justify-center text-primary-500 hover:text-white hover:bg-primary-500 bg-neutral-100 p-3 rounded-md cursor-pointer m-1"
                   onClick={() => {
                     item.handle(row[item?.key ?? "id"]);
                   }}

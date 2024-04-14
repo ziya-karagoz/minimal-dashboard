@@ -52,7 +52,7 @@ export default function Pagination({
         <li key={i}>
           <button
             onClick={() => handlePageChange(i)}
-            className={`flex items-center justify-center px-3 h-8 leading-tight ${currentPage === i ? 'text-white bg-red-500 hover:bg-red-600' : 'text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700'} rounded-md mx-1 `}
+            className={`flex items-center justify-center px-3 h-8 leading-tight ${currentPage === i ? 'text-white bg-primary-500 hover:bg-primary-600' : 'text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700'} rounded-md mx-1 `}
           >
             {i}
           </button>
