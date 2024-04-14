@@ -3,26 +3,9 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import { mapStyle } from "./core/style/data";
+import { SimpleMapProps } from "./Maps.types";
 
-interface Waypoint {
-  lat: number;
-  lng: number;
-}
 
-interface SimpleMapProps {
-  isRoute: boolean; // true ise waypointlere göre rota ekler. false ise location bilgisindeki konuma tek bir marker işareti ekler.
-  location?: Waypoint;
-  waypoints?: Waypoint[];
-  size?: { width: string; height: string };
-  additionalMarkers?: {
-    location?: Waypoint;
-    icon: {
-      url: string;
-      scaledSize: number;
-    };
-    title?: string;
-  }[];
-}
 
 const SimpleMap: React.FC<SimpleMapProps> = ({
   isRoute,

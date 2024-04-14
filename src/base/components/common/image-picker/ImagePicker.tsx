@@ -3,14 +3,10 @@ import React from "react";
 import Avatar from "../avatars/Avatar";
 import Button from "../buttons/Button";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { ImagePickerProps } from "./ImagePicker.types";
 
-type Props = {
-  value: string | null;
-  onChange: (value: string | null) => void;
-  exClass?: string;
-};
 
-const ImagePicker = ({ value, onChange, exClass }: Props) => {
+const ImagePicker = ({ value, onChange, exClass }: ImagePickerProps) => {
   const [open, setOpen] = React.useState(false);
 
   return (

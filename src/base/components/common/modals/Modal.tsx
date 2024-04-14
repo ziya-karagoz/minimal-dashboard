@@ -2,15 +2,9 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import clsx from "clsx";
 import React, { useContext, useEffect } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
+import { ModalProps } from "./Modal.types";
 
-type ModalProps = {
-    size?: "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl";
-    open: boolean;
-    align?: "center" | "default";
-    onClose: () => void;
-    backdrop?: "default" | "static";
-    children: React.ReactNode;
-};
+
 
 const ModalContext = React.createContext<{
     open: boolean;

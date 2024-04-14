@@ -3,14 +3,9 @@ import PhoneInput, { CountryData } from "react-phone-input-2";
 import 'react-phone-input-2/lib/high-res.css'
 
 import React from 'react'
+import { ReactPhoneInputProps } from "./PhoneInput.types";
 
-type ReactPhoneInputProps = {
-    withCode?: boolean;
-    value?: any;
-    name?: string | undefined;
-    id?: string | undefined;
-    onChange?: (e: any) => void;
-};
+
 
 const ReactPhoneInput: React.FC<ReactPhoneInputProps> = ({ value, name, onChange, id, withCode = false }) => {
     return (

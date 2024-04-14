@@ -1,25 +1,8 @@
 import clsx from "clsx";
 import React from "react";
+import { ProgressProps } from "./Progress.types";
 
-// progressiveColors overrides the color prop and uses a gradient from red to green based on the value prop
-type ProgressProps = {
-    title?: string;
-    value: number;
-    progressiveColors?: boolean;
-    color?:
-    | "blue"
-    | "gray"
-    | "red"
-    | "green"
-    | "yellow"
-    | "indigo"
-    | "purple"
-    | "pink"
-    | "orange";
-    size: "sm" | "md" | "lg";
-    withLabel?: boolean;
-    labelPosition?: "inside" | "outside";
-};
+
 
 const Progress: React.FC<ProgressProps> = ({
     title = undefined,

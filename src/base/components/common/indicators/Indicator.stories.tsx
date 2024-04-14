@@ -5,6 +5,7 @@ import { IndicatorProps } from './Indicator.types';
 export default {
   title: 'Components/Indicator',
   component: Indicator,
+  tags: ['autodocs'],
   argTypes: {
     color: {
       control: 'select',

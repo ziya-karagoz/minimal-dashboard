@@ -9,6 +9,7 @@ import "react-quill/dist/quill.snow.css";
 import ImageResize from "quill-image-resize-module-react";
 import { redoChange, undoChange } from "./QuillEditorToolbar";
 import FileBrowserModal from "@app/modules/file-manager/components/modals/FileBrowserModal";
+import { QuillEditorProps } from "./QuillEditor.types";
 
 Quill.register("modules/imageResize", ImageResize);
 window.Quill = Quill;
@@ -46,13 +47,7 @@ ImageBlot.tagName = "div";
 
 Quill.register(ImageBlot);
 
-type Props = {
-  setEditorHtml: (event: any, name: string, value: string) => void;
-  editorHtml?: string;
-  name?: string;
-  placeholder?: string;
-  readOnly?: boolean;
-};
+
 
 export default function QuillEditor({
   setEditorHtml,
@@ -60,7 +55,7 @@ export default function QuillEditor({
   name = "",
   placeholder = "Harika bir şey yaz...",
   readOnly = false,
-}: Props) {
+}: QuillEditorProps) {
   const quillRef = React.useRef<ReactQuill>(null);
   const [openFileManager, setOpenFileManager] = React.useState(false);
   const [selectedFileUrl, setSelectedFileUrl] = React.useState("");

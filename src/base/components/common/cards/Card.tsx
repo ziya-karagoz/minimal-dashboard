@@ -2,29 +2,9 @@ import React, { createContext, useContext, useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import clsx from "clsx";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
+import { CardBodyProps, CardFooterProps, CardHeaderProps, CardProps } from "./Card.types";
 
-type CardProps = {
-    exClass?: string;
-    shadow?: "sm" | "md" | "lg" | "xl" | "2xl" | "none";
-    dismissible?: boolean;
-    collapsible?: boolean;
-    onDismiss?: () => void;
-    children: React.ReactNode;
-};
 
-type CardHeaderProps = {
-    dismissIcon?: React.ReactNode;
-    children: React.ReactNode;
-};
-
-type CardBodyProps = {
-    children: React.ReactNode;
-};
-
-type CardFooterProps = {
-    floating?: boolean; // Yeni özellik
-    children: React.ReactNode;
-};
 
 const CardContext = createContext<{
     dismissible?: boolean;

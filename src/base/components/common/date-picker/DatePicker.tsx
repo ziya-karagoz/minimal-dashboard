@@ -1,20 +1,9 @@
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/light.css";
 import { ChangeEvent } from "react";
+import { DatePickerProps } from "./DatePicker.types";
 
-type DatePickerProps = {
-  className?: string;
-  value?:
-    | string
-    | number
-    | Date
-    | readonly (string | number | Date)[]
-    | undefined;
-  onChange?: ((event: ChangeEvent<HTMLInputElement>) => void) | undefined;
-  enableTime?: boolean | undefined;
-  noCalendar?: boolean | undefined;
-  disabled?: boolean;
-};
+
 
 const DatePicker: React.FC<DatePickerProps> = ({
   className = "",
