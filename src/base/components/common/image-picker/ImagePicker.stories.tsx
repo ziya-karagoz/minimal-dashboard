@@ -55,7 +55,7 @@ const Template: StoryFn<ImagePickerProps> = (args) => {
 
   React.useEffect(() => {
     handleLogin({
-      email: "ziya@konutkonfor.com",
+      email: "ziya@minimal.com",
       password: "123456",
       rememberMe: false,
     });

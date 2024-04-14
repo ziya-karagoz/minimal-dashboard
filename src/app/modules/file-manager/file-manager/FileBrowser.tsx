@@ -44,7 +44,7 @@ function FileBrowser({ setSelectedFileUrl }: Props) {
   const [refresh, setrefresh] = useState(false);
   const [onLoad, setOnLoad] = useState(false);
   const [currentPath, setCurrentPath] = useState(
-    localStorage.getItem("currentPath") ?? "/konutkonfor"
+    localStorage.getItem("currentPath") ?? "/minimal-dashboard"
   );
   const { filesStatus } = useSelector((state: RootState) => state.fileBrowser);
   const customizeIcon = (fileSystemItem: any) => {

@@ -74,16 +74,34 @@ const LayoutSplashScreen: FC<{ visible?: boolean }> = ({ visible = true }) => {
 
     return (
         <div className="w-screen h-screen flex items-center justify-center fixed inset-0 z-50 bg-white">
-            <svg width="142" height="142" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clipPath="url(#clip0_547_588)">
-                    <path d="M69.2 72L58 60.7H38.5L70.9 97.7L129.8 13.7V0L69.2 72Z" fill="#7F2629" />
-                    <path d="M111.5 56.7C113.3 61.5 114.3 66.6 114.3 72C114.3 96 94.9 115.5 70.8 115.5C46.8 115.5 27.2999 96 27.2999 72C27.2999 48 46.8 28.5 70.8 28.5C77.5 28.5 83.8 30 89.4 32.7L106.6 12.2C96.2 5.99999 84 2.39999 70.8 2.39999C32.4 2.39999 1.19995 33.6 1.19995 72.1C1.19995 110.6 32.4 141.8 70.9 141.8C109.4 141.8 140.6 110.6 140.6 72.1C140.6 57.5 136.1 44 128.4 32.8L111.5 56.7Z" fill="#E61111" />
-                </g>
-                <defs>
-                    <clipPath id="clip0_547_588">
-                        <rect width="141.7" height="141.7" fill="white" />
-                    </clipPath>
-                </defs>
+            <svg
+              className="w-36 h-36"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="#303030"
+                stroke-width="6"
+              />
+              <circle
+                cx="50"
+                cy="17.6768"
+                r="15.6768"
+                fill="none"
+                stroke="#303030"
+                stroke-width="4"
+              />
+              <path
+                d="M58.596 26.7677C58.596 30.9042 55.0282 34.3536 50.505 34.3536C45.9819 34.3536 42.4141 30.9042 42.4141 26.7677C42.4141 22.6313 45.9819 19.1819 50.505 19.1819C55.0282 19.1819 58.596 22.6313 58.596 26.7677Z"
+                fill="none"
+                stroke="#303030"
+                stroke-width="2"
+              />
             </svg>
 
         </div>

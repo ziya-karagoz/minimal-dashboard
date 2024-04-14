@@ -11,17 +11,17 @@ const validationSchema = Yup.object().shape({
   //password: Yup.string().required("Password is required"),
 });
 
-
 const Login = () => {
   const { saveAuth, setCurrentUser } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async ({ email, password, rememberMe }: LoginRequest) => {
-
     const { accessToken } = await login(email, password).catch((error) => {
       swal.fire({
         title: "Hata",
-        text: error.response?.data?.message || "Bir hata oluştu. Lütfen tekrar deneyin.",
+        text:
+          error.response?.data?.message ||
+          "Bir hata oluştu. Lütfen tekrar deneyin.",
         icon: "error",
       });
       throw error;
@@ -32,7 +32,6 @@ const Login = () => {
     setCurrentUser(user);
     // not a good way to do this but there is a bug that prevents from navigating to dashboard in AppRoutes.tsx
     navigate("/anasayfa");
-
   };
 
   const formik = useFormik({
@@ -50,7 +49,7 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title> Konutkonfor Admin | Login </title>
+        <title> Minimal Dashboard Admin | Login </title>
       </Helmet>
       <section className="bg-gray-50 h-screen">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -58,26 +57,46 @@ const Login = () => {
             href="#"
             className="flex items-center mb-6 text-2xl font-semibold text-red-900"
           >
-            <svg className="w-12 h-12 me-2" width="142" height="142" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_547_588)">
-                <path d="M69.2 72L58 60.7H38.5L70.9 97.7L129.8 13.7V0L69.2 72Z" fill="#7F2629" />
-                <path d="M111.5 56.7C113.3 61.5 114.3 66.6 114.3 72C114.3 96 94.9 115.5 70.8 115.5C46.8 115.5 27.2999 96 27.2999 72C27.2999 48 46.8 28.5 70.8 28.5C77.5 28.5 83.8 30 89.4 32.7L106.6 12.2C96.2 5.99999 84 2.39999 70.8 2.39999C32.4 2.39999 1.19995 33.6 1.19995 72.1C1.19995 110.6 32.4 141.8 70.9 141.8C109.4 141.8 140.6 110.6 140.6 72.1C140.6 57.5 136.1 44 128.4 32.8L111.5 56.7Z" fill="#E61111" />
-              </g>
-              <defs>
-                <clipPath id="clip0_547_588">
-                  <rect width="141.7" height="141.7" fill="white" />
-                </clipPath>
-              </defs>
+            <svg
+              className="w-8 h-8 mr-2"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="#303030"
+                stroke-width="6"
+              />
+              <circle
+                cx="50"
+                cy="17.6768"
+                r="15.6768"
+                fill="none"
+                stroke="#303030"
+                stroke-width="4"
+              />
+              <path
+                d="M58.596 26.7677C58.596 30.9042 55.0282 34.3536 50.505 34.3536C45.9819 34.3536 42.4141 30.9042 42.4141 26.7677C42.4141 22.6313 45.9819 19.1819 50.505 19.1819C55.0282 19.1819 58.596 22.6313 58.596 26.7677Z"
+                fill="none"
+                stroke="#303030"
+                stroke-width="2"
+              />
             </svg>
-
-            Konutkonfor
+            Minimal Dashboard
           </a>
           <div className="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                 Hesabına Giriş Yap
               </h1>
-              <form className="space-y-4 md:space-y-6" onSubmit={formik.handleSubmit}>
+              <form
+                className="space-y-4 md:space-y-6"
+                onSubmit={formik.handleSubmit}
+              >
                 <div>
                   <label
                     htmlFor="email"
@@ -94,11 +113,11 @@ const Login = () => {
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-gray-600 focus:border-gray-600 block w-full p-2.5"
                     placeholder="name@company.com"
                   />
-                  {
-                    formik.touched.email && formik.errors.email ? (
-                      <p className="mt-2 text-sm text-red-600">{formik.errors.email}</p>
-                    ) : null
-                  }
+                  {formik.touched.email && formik.errors.email ? (
+                    <p className="mt-2 text-sm text-red-600">
+                      {formik.errors.email}
+                    </p>
+                  ) : null}
                 </div>
                 <div>
                   <label
@@ -116,12 +135,11 @@ const Login = () => {
                     onChange={formik.handleChange}
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-gray-600 focus:border-gray-600 block w-full p-2.5 "
                   />
-                  {
-                    formik.touched.password && formik.errors.password ? (
-                      <p className="mt-2 text-sm text-red-600">{formik.errors.password}</p>
-                    ) : null
-                  }
-
+                  {formik.touched.password && formik.errors.password ? (
+                    <p className="mt-2 text-sm text-red-600">
+                      {formik.errors.password}
+                    </p>
+                  ) : null}
                 </div>
                 <div className="flex items-center justify-between">
                   <div className="flex items-start">
@@ -137,10 +155,7 @@ const Login = () => {
                       />
                     </div>
                     <div className="ml-3 text-sm">
-                      <label
-                        htmlFor="remember"
-                        className="text-gray-500"
-                      >
+                      <label htmlFor="remember" className="text-gray-500">
                         Beni Hatırla
                       </label>
                     </div>
